@@ -421,26 +421,26 @@ class HomeTraningPage: UIViewController,UITextFieldDelegate {
     }
     @objc func saveTraining(){
  
-        print(repeatTextField1.text)
-        print(repeatTextField2.text)
-        print(repeatTextField3.text)
-        print(repeatTextField4.text)
-        print(repeatTextField5.text)
-        print(repeatTextField6.text)
+        print(repeatTextField1.text as Any)
+        print(repeatTextField2.text as Any)
+        print(repeatTextField3.text as Any)
+        print(repeatTextField4.text as Any)
+        print(repeatTextField5.text as Any)
+        print(repeatTextField6.text as Any)
         
-        print(wayTextField1.text)
-        print(wayTextField2.text)
-        print(wayTextField3.text)
-        print(wayTextField4.text)
-        print(wayTextField5.text)
-        print(wayTextField6.text)
+        print(wayTextField1.text as Any)
+        print(wayTextField2.text as Any)
+        print(wayTextField3.text as Any)
+        print(wayTextField4.text as Any)
+        print(wayTextField5.text as Any)
+        print(wayTextField6.text as Any)
         
-        print(weightTextField1.text)
-        print(weightTextField2.text)
-        print(weightTextField3.text)
-        print(weightTextField4.text)
-        print(weightTextField5.text)
-        print(weightTextField6.text)
+        print(weightTextField1.text as Any)
+        print(weightTextField2.text as Any)
+        print(weightTextField3.text as Any)
+        print(weightTextField4.text as Any)
+        print(weightTextField5.text as Any)
+        print(weightTextField6.text as Any)
    
     }
 }

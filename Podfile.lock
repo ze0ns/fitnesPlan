@@ -6,11 +6,13 @@ PODS:
   - Realm/Headers (10.20.1)
   - RealmSwift (10.20.1):
     - Realm (= 10.20.1)
+  - Strapi-iOS (0.1.1)
 
 DEPENDENCIES:
   - Alamofire
   - DropDown
   - RealmSwift
+  - Strapi-iOS
 
 SPEC REPOS:
   trunk:
@@ -18,13 +20,15 @@ SPEC REPOS:
     - DropDown
     - Realm
     - RealmSwift
+    - Strapi-iOS
 
 SPEC CHECKSUMS:
   Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   Realm: fac5ecd031fcb81171627b74944c885662d4b266
   RealmSwift: 9b02d25acb46a14756bde9893abb99e2e3675923
+  Strapi-iOS: 9b9ac09434f1798d2fcbedd2c0fa812349ff0252
 
-PODFILE CHECKSUM: 0d9d6796f49f04e8a007e963706dc0c432114d7e
+PODFILE CHECKSUM: c51f4beaa4616e4d3cbc86f1265c75d8f9b2d881
 
 COCOAPODS: 1.11.2

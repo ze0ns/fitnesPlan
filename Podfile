@@ -6,7 +6,7 @@ target 'FitnesPlan' do
   use_modular_headers!
   pod 'Alamofire'
   pod 'RealmSwift'
-  
+  pod 'Strapi-iOS'
   pod 'DropDown'
 
   # Pods for FitnesPlan
