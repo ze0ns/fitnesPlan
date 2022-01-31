@@ -15,12 +15,12 @@ class Exercises: UIViewController{
     var token: String? = nil
     
     override func viewDidLoad() {
-        token = String(describing: Session.shared.userProfile["jwt"]!)
-        strapi.scheme = "https"
-        strapi.host = "fitness.zeons.ru"
-        strapi.port = 443
-        strapi.token = token
-        
+//        token = String(describing: Session.shared.userProfile["jwt"]!)
+//        strapi.scheme = "https"
+//        strapi.host = "fitness.zeons.ru"
+//        strapi.port = 443
+//        strapi.token = token
+//        
 
     }
     

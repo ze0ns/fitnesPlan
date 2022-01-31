@@ -13,5 +13,5 @@ final class Session{
     
     var token: String = "" //Token VK
     var userId: Int = 0    //ID пользователя
-    var userProfile: [String: Any] = [:]
+    var userProfile: UserProfile?
 }

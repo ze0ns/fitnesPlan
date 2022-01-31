@@ -10,6 +10,7 @@ import UIKit
 class LoginViewController: UIViewController {
     let strapi = Strapi.shared
     var data: Data?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,12 +26,14 @@ class LoginViewController: UIViewController {
                 guard let record = response.data  else {return}
                 self.data = record as? Data
                // print(self.data?.prettyJSON)
-                print("Присваиваем профилю")
+                print("Получили ответ, декодим JSON, присвоили его переменным")
                 
               //  Session.shared.userProfile = record
                 do{
                     let userProfile = try? JSONDecoder().decode(UserProfile.self, from: self.data!)
-                    print(userProfile)
+                    Session.shared.userProfile = userProfile
+                    Session.shared.token = userProfile!.jwt
+      
                 }catch{
                     print("Operations Error")
                     print(error)
