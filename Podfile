@@ -8,7 +8,7 @@ target 'FitnesPlan' do
   pod 'RealmSwift'
   pod 'Strapi-iOS'
   pod 'DropDown'
-
+  pod 'DynamicJSON'
   
   # Pods for FitnesPlan
 

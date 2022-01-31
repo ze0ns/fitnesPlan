@@ -11,6 +11,7 @@ class TestViewController: UIViewController {
     let strapi = Strapi.shared
     var token: String? = nil
     var data: Data?
+//    var plans: [TrainingsValue] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,23 +27,17 @@ class TestViewController: UIViewController {
         
         let request = Request(
             method: "GET",
-            contentType: "plans" // You can use any route here
+            contentType: "exercises" // You can use any route here
 //            parameters: [
 //                "price_eq": 3
 //            ]
         )
         strapi.exec(request: request, needAuthentication: true) { response in
-            guard let data = response.data else {
+            guard let data = response.data as? [String: Any]  else {
                 print("Не смог инициировать переменную")
                 return
             }
-            do{
-                let trainings = try? JSONDecoder().decode(Trainings.self, from: data as! Data)
-                print(trainings)
-            }catch{
-                print("Operations Error")
-                print(error)
-            }
+        print(data)
         }
         
     }
