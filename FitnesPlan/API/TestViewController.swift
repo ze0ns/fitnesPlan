@@ -10,6 +10,7 @@ import UIKit
 class TestViewController: UIViewController {
     let strapi = Strapi.shared
     var token: String? = nil
+    var data: Data?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,11 +32,17 @@ class TestViewController: UIViewController {
 //            ]
         )
         strapi.exec(request: request, needAuthentication: true) { response in
-            guard let list = response.data else {
+            guard let data = response.data else {
                 print("Не смог инициировать переменную")
                 return
             }
-            print("Data retrieved: \(list)")
+            do{
+                let trainings = try? JSONDecoder().decode(Trainings.self, from: data as! Data)
+                print(trainings)
+            }catch{
+                print("Operations Error")
+                print(error)
+            }
         }
         
     }
