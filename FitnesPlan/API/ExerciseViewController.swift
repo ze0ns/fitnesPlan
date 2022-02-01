@@ -7,7 +7,7 @@
 import Strapi_iOS
 import UIKit
 
-class TestViewController: UIViewController {
+class ExerciseViewController: UIViewController {
     let strapi = Strapi.shared
     var token: String? = nil
     var data: Data?
@@ -32,7 +32,8 @@ class TestViewController: UIViewController {
             guard let data = response.data else {return}
             self.data = data as? Data
             do{
-             //   print(self.data?.prettyJSON)
+              //  print(self.data?.prettyJSON)
+                print("Парсим JSON")
                 let exerciseJSON = try JSONDecoder().decode([Exercise].self, from: self.data!)
                 self.exercise = exerciseJSON
                 let count = self.exercise.count - 1
@@ -41,6 +42,7 @@ class TestViewController: UIViewController {
                     self.exerciseLocal.append(ExerciseLocal(id: self.exercise[n].id, name: self.exercise[n].name, exerciseDescription: self.exercise[n].exerciseDescription, movie: self.exercise[n].movie) )
                     n = n + 1
                 }
+                print(self.exerciseLocal)
             } catch DecodingError.keyNotFound(let key, let context) {
                 Swift.print("could not find key \(key) in JSON: \(context.debugDescription)")
             } catch DecodingError.valueNotFound(let type, let context) {
