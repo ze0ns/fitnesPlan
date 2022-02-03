@@ -13,7 +13,9 @@
 		06569EF227AB959800E71F20 /* TrainingPlanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06569EF127AB959800E71F20 /* TrainingPlanModel.swift */; };
 		065CA89C27A6ECE300D0693D /* Data+PrettyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065CA89B27A6ECE300D0693D /* Data+PrettyJSON.swift */; };
 		065CA89E27A6F11100D0693D /* ExercisesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065CA89D27A6F11100D0693D /* ExercisesModel.swift */; };
-		065DE3CA27A7AAD800787D54 /* Exercises.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065DE3C927A7AAD800787D54 /* Exercises.swift */; };
+		065F094E27ABBE16004E542E /* TrainingModelLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065F094D27ABBE16004E542E /* TrainingModelLocal.swift */; };
+		065F095027ABE19F004E542E /* ExerciseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065F094F27ABE19F004E542E /* ExerciseAPI.swift */; };
+		065F095227ABF07A004E542E /* ExercisesLocalDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065F095127ABF07A004E542E /* ExercisesLocalDB.swift */; };
 		0675E338278ADBF4008E3B09 /* HomeTraningPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0675E337278ADBF4008E3B09 /* HomeTraningPage.swift */; };
 		067CB45B278B0B730073FE78 /* SecondDayTraining.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067CB45A278B0B730073FE78 /* SecondDayTraining.swift */; };
 		067CB45D278B0BC20073FE78 /* threeDayTrayning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067CB45C278B0BC20073FE78 /* threeDayTrayning.swift */; };
@@ -24,7 +26,7 @@
 		06801B8D278AD4CC00198E77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06801B8C278AD4CC00198E77 /* Assets.xcassets */; };
 		06801B90278AD4CC00198E77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06801B8E278AD4CC00198E77 /* LaunchScreen.storyboard */; };
 		06B7278027A7EF8A00BCE869 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B7277F27A7EF8A00BCE869 /* UserProfile.swift */; };
-		06B7278227A7F8F200BCE869 /* customModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B7278127A7F8F200BCE869 /* customModel.swift */; };
+		06B7278227A7F8F200BCE869 /* CustomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B7278127A7F8F200BCE869 /* CustomModel.swift */; };
 		06B7278527A80A4500BCE869 /* ExercisesLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B7278427A80A4500BCE869 /* ExercisesLocal.swift */; };
 		06B7278827A81BA600BCE869 /* ExerciseDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B7278727A81BA600BCE869 /* ExerciseDB.swift */; };
 		06B7278A27A81D7400BCE869 /* PlanDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B7278927A81D7400BCE869 /* PlanDayViewController.swift */; };
@@ -38,7 +40,9 @@
 		06569EF127AB959800E71F20 /* TrainingPlanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingPlanModel.swift; sourceTree = "<group>"; };
 		065CA89B27A6ECE300D0693D /* Data+PrettyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+PrettyJSON.swift"; sourceTree = "<group>"; };
 		065CA89D27A6F11100D0693D /* ExercisesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesModel.swift; sourceTree = "<group>"; };
-		065DE3C927A7AAD800787D54 /* Exercises.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercises.swift; sourceTree = "<group>"; };
+		065F094D27ABBE16004E542E /* TrainingModelLocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingModelLocal.swift; sourceTree = "<group>"; };
+		065F094F27ABE19F004E542E /* ExerciseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseAPI.swift; sourceTree = "<group>"; };
+		065F095127ABF07A004E542E /* ExercisesLocalDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesLocalDB.swift; sourceTree = "<group>"; };
 		0675E337278ADBF4008E3B09 /* HomeTraningPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTraningPage.swift; sourceTree = "<group>"; };
 		067CB45A278B0B730073FE78 /* SecondDayTraining.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondDayTraining.swift; sourceTree = "<group>"; };
 		067CB45C278B0BC20073FE78 /* threeDayTrayning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = threeDayTrayning.swift; sourceTree = "<group>"; };
@@ -51,7 +55,7 @@
 		06801B8F278AD4CC00198E77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		06801B91278AD4CC00198E77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06B7277F27A7EF8A00BCE869 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
-		06B7278127A7F8F200BCE869 /* customModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customModel.swift; sourceTree = "<group>"; };
+		06B7278127A7F8F200BCE869 /* CustomModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModel.swift; sourceTree = "<group>"; };
 		06B7278427A80A4500BCE869 /* ExercisesLocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesLocal.swift; sourceTree = "<group>"; };
 		06B7278727A81BA600BCE869 /* ExerciseDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDB.swift; sourceTree = "<group>"; };
 		06B7278927A81D7400BCE869 /* PlanDayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanDayViewController.swift; sourceTree = "<group>"; };
@@ -78,8 +82,8 @@
 				060516A027A6A5DA00D1CE01 /* LoginViewController.swift */,
 				060516A527A6B3ED00D1CE01 /* Session.swift */,
 				060516A727A6B4A800D1CE01 /* ExerciseViewController.swift */,
-				065DE3C927A7AAD800787D54 /* Exercises.swift */,
 				06B7278927A81D7400BCE869 /* PlanDayViewController.swift */,
+				065F094F27ABE19F004E542E /* ExerciseAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -87,11 +91,13 @@
 		060516A227A6B09B00D1CE01 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				065CA89D27A6F11100D0693D /* ExercisesModel.swift */,
+				06B7278127A7F8F200BCE869 /* CustomModel.swift */,
 				06B7277F27A7EF8A00BCE869 /* UserProfile.swift */,
-				06B7278127A7F8F200BCE869 /* customModel.swift */,
+				065CA89D27A6F11100D0693D /* ExercisesModel.swift */,
 				06B7278427A80A4500BCE869 /* ExercisesLocal.swift */,
 				06569EF127AB959800E71F20 /* TrainingPlanModel.swift */,
+				065F094D27ABBE16004E542E /* TrainingModelLocal.swift */,
+				065F095127ABF07A004E542E /* ExercisesLocalDB.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -293,11 +299,11 @@
 			files = (
 				06569EF227AB959800E71F20 /* TrainingPlanModel.swift in Sources */,
 				060516A827A6B4A800D1CE01 /* ExerciseViewController.swift in Sources */,
+				065F095027ABE19F004E542E /* ExerciseAPI.swift in Sources */,
 				06B7278A27A81D7400BCE869 /* PlanDayViewController.swift in Sources */,
-				065DE3CA27A7AAD800787D54 /* Exercises.swift in Sources */,
 				060516A127A6A5DA00D1CE01 /* LoginViewController.swift in Sources */,
 				06801B88278AD4CB00198E77 /* ViewController.swift in Sources */,
-				06B7278227A7F8F200BCE869 /* customModel.swift in Sources */,
+				06B7278227A7F8F200BCE869 /* CustomModel.swift in Sources */,
 				06B7278527A80A4500BCE869 /* ExercisesLocal.swift in Sources */,
 				0675E338278ADBF4008E3B09 /* HomeTraningPage.swift in Sources */,
 				06801B84278AD4CB00198E77 /* AppDelegate.swift in Sources */,
@@ -306,7 +312,9 @@
 				06801B86278AD4CB00198E77 /* SceneDelegate.swift in Sources */,
 				067CB45D278B0BC20073FE78 /* threeDayTrayning.swift in Sources */,
 				060516A627A6B3ED00D1CE01 /* Session.swift in Sources */,
+				065F094E27ABBE16004E542E /* TrainingModelLocal.swift in Sources */,
 				065CA89C27A6ECE300D0693D /* Data+PrettyJSON.swift in Sources */,
+				065F095227ABF07A004E542E /* ExercisesLocalDB.swift in Sources */,
 				065CA89E27A6F11100D0693D /* ExercisesModel.swift in Sources */,
 				06B7278027A7EF8A00BCE869 /* UserProfile.swift in Sources */,
 			);

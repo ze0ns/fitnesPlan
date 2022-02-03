@@ -5,40 +5,45 @@
 ////  Created by Oschepkov Aleksandr on 31.01.2022.
 ////
 //
-//import Foundation
-//import RealmSwift
-//
-//
-//
-//class FriendsDB {
-//
-//     let config = Realm.Configuration(schemaVersion: 0)
-//     lazy var mainRealm = try! Realm(configuration: config)
-//     var friends: [Friend] = []
-//    
-//    
-//     func addData(_ user: [Friend]) {
-//        mainRealm.beginWrite()
-//        friends = user
-//        let friend = Friend()
-//        let e = self.friends.count
-//        var i = 0
-//        while i < e {
-//            friend.id = self.friends[i].id
-//            friend.firstName = self.friends[i].firstName
-//            friend.lastName = self.friends[i].lastName
-//            friend.photo50 = self.friends[i].photo50
-//            
-//            mainRealm.add(user)
-//            i = i + 1
-//        }
-//        do {
-//            try mainRealm.commitWrite()
-//        } catch {
-//            print(error.localizedDescription)
-//        }
-//        
-//     }
+import Foundation
+import RealmSwift
+
+
+
+class ExerciseDB {
+
+     let config = Realm.Configuration(schemaVersion: 0)
+     lazy var mainRealm = try! Realm(configuration: config)
+     var ExerciseLocal: [ExerciseLocal] = []
+    
+    
+
+     func addData(_ exerciseLocal: [ExerciseLocal]) {
+        
+        ExerciseLocal = exerciseLocal
+        let exercise = exerciseLocalDB()
+        let e = self.ExerciseLocal.count
+        var i = 0
+        mainRealm.beginWrite()
+         while i < e {
+             exercise.id = self.ExerciseLocal[i].id
+             exercise.name = self.ExerciseLocal[i].name
+             exercise.exerciseDescription = self.ExerciseLocal[i].exerciseDescription
+             exercise.movie = self.ExerciseLocal[i].movie
+         
+         
+             mainRealm.add(exercise)
+             print(exercise.id, exercise.name, exercise.exerciseDescription, exercise.movie)
+             i = i + 1
+          }
+         
+        do {
+            try mainRealm.commitWrite()
+            print(mainRealm.configuration.fileURL)
+        } catch {
+            print(error.localizedDescription)
+        }
+     }
 //    func fetch() -> [Friend] {
 //
 //             //Прочитать объекты
@@ -53,4 +58,6 @@
 //            mainRealm.deleteAll()
 //        }
 //    }
-// }
+ }
+
+

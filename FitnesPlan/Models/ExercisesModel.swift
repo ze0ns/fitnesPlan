@@ -5,16 +5,17 @@
 
 import Foundation
 
+
 // MARK: - Exercise
-struct Exercise: Codable {
-    let id: Int
-    let name: String
-    let exerciseDescription: String?
-    let createdBy, updatedBy: AtedBy
-    let createdAt, updatedAt: String?
-   // let movie: JSONNull?
-    let movie: String?
-    
+//Модель данных используемая для созранения списка упражнений с сервера
+class ExerciseProfiles: Codable {
+    let  id: Int
+    let  name: String
+    let  exerciseDescription: String?
+    let  createdBy, updatedBy: AtedBy
+    let  createdAt, updatedAt: String?
+    let  movie: String?
+
     enum CodingKeys: String, CodingKey {
         case id, name
         case exerciseDescription = "description"
@@ -25,4 +26,3 @@ struct Exercise: Codable {
         case movie
     }
 }
-

@@ -15,11 +15,11 @@ import Foundation
 // MARK: - UserProfile
 struct UserProfile: Codable {
     let jwt: String
-    let user: User
+    let user: UserP
 }
 
 // MARK: - User
-struct User: Codable {
+struct UserP: Codable {
     let id: Int
     let provider: String
     let blocked: Bool
@@ -43,5 +43,6 @@ struct User: Codable {
         case email, name
     }
 }
+
 
 

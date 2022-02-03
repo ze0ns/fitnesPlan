@@ -12,8 +12,11 @@ class PlanDayViewController: UIViewController {
     var token: String? = nil
     var data: Data?
     var plan: [TrainingPlanElement] = []
-    var planLocal:[ExerciseLocal] = []
-    var datas: String = "2022-01-22"
+    var planLocal:[TrainingPlanLocal] = []
+    
+   
+    ///Дата тренировки для запроса на сервер
+    var dataPlan: String = "2022-02-06"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,17 +30,26 @@ class PlanDayViewController: UIViewController {
  
         let request = Request(
             method: "GET",
-            contentType: "day?date="+datas // You can use any route here
+            contentType: "day?date="+dataPlan // You can use any route here
         )
         strapi.exec(request: request, needAuthentication: true) { response in
             guard let data = response.data else {return}
             self.data = data as? Data
             do{
-                print(self.data?.prettyJSON)
+               // print(self.data?.prettyJSON)
                 print("Парсим JSON")
                 let planJSON = try JSONDecoder().decode([TrainingPlanElement].self, from: self.data!)
                 self.plan = planJSON
-                print(self.plan)
+                print(self.plan.count)
+                let count = self.plan.count - 1
+                var n = 0
+                for _ in 0 ... count {
+                    self.planLocal.append(TrainingPlanLocal(id: self.plan[n].id, replay: self.plan[n].replay, trainingPlanDescription: self.plan[n].trainingPlanDescription, exercise: self.plan[n].exercise.id, weight: self.plan[n].weight, date: self.plan[n].date, counter: self.plan[n].counter))
+                n = n + 1
+                }
+                
+                print("Загрузили план тренировок локально")
+                print(self.planLocal)
             } catch DecodingError.keyNotFound(let key, let context) {
                 Swift.print("could not find key \(key) in JSON: \(context.debugDescription)")
             } catch DecodingError.valueNotFound(let type, let context) {
