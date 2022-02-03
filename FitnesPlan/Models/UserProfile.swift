@@ -26,8 +26,7 @@ struct User: Codable {
     let createdAt, surname: String
     let createdBy: AtedBy
     let confirmed: Bool
-    let birthday: JSONNull?
-    let updatedAt, username: String
+    let birthday, updatedAt, username: String
     let role: Role
     let updatedBy: AtedBy
     let email, name: String

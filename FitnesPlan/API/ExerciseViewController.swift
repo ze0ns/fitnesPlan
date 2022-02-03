@@ -16,7 +16,7 @@ class ExerciseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Новый контроллер, проверка ключа")
+        print("Список упражнений")
 
         token = Session.shared.token
         strapi.scheme = "https"
@@ -33,7 +33,7 @@ class ExerciseViewController: UIViewController {
             self.data = data as? Data
             do{
               //  print(self.data?.prettyJSON)
-                print("Парсим JSON")
+                print("Парсим JSON упражнений")
                 let exerciseJSON = try JSONDecoder().decode([Exercise].self, from: self.data!)
                 self.exercise = exerciseJSON
                 let count = self.exercise.count - 1

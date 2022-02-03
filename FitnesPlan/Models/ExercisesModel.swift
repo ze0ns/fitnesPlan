@@ -11,7 +11,7 @@ struct Exercise: Codable {
     let name: String
     let exerciseDescription: String?
     let createdBy, updatedBy: AtedBy
-    let createdAt, updatedAt: String
+    let createdAt, updatedAt: String?
    // let movie: JSONNull?
     let movie: String?
     

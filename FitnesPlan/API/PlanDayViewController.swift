@@ -11,9 +11,9 @@ class PlanDayViewController: UIViewController {
     let strapi = Strapi.shared
     var token: String? = nil
     var data: Data?
-    var exercise: [Exercise] = []
-    var exerciseLocal:[ExerciseLocal] = []
-    var datas: String = "2022-01-19"
+    var plan: [TrainingPlanElement] = []
+    var planLocal:[ExerciseLocal] = []
+    var datas: String = "2022-01-22"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +35,9 @@ class PlanDayViewController: UIViewController {
             do{
                 print(self.data?.prettyJSON)
                 print("Парсим JSON")
-           
+                let planJSON = try JSONDecoder().decode([TrainingPlanElement].self, from: self.data!)
+                self.plan = planJSON
+                print(self.plan)
             } catch DecodingError.keyNotFound(let key, let context) {
                 Swift.print("could not find key \(key) in JSON: \(context.debugDescription)")
             } catch DecodingError.valueNotFound(let type, let context) {

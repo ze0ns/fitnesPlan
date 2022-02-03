@@ -20,12 +20,12 @@ class LoginViewController: UIViewController {
         strapi.port = 443
         
         strapi.login(
-            identifier: "fitnes@zeons.ru",
-            password: "p@ssw0rd") { response in
+            identifier: "zeons@mail.ru",
+            password: "P@ssw0rd") { response in
           //  guard let record = response.data as? [String: Any] else {return}
                 guard let record = response.data  else {return}
                 self.data = record as? Data
-               // print(self.data?.prettyJSON)
+                //print(self.data?.prettyJSON)
                 print("Получили ответ, декодим JSON, присвоили его переменным")
                 
               //  Session.shared.userProfile = record
@@ -33,7 +33,8 @@ class LoginViewController: UIViewController {
                     let userProfile = try? JSONDecoder().decode(UserProfile.self, from: self.data!)
                     Session.shared.userProfile = userProfile
                     Session.shared.token = userProfile!.jwt
-      
+                    print("Получили токен ")
+                    print(Session.shared.token)
                 }catch{
                     print("Operations Error")
                     print(error)
