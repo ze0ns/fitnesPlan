@@ -11,8 +11,8 @@ class ExerciseViewController: UIViewController {
     
     let exerciseAPI = ExerciseAPI()
     let exerciseDB  = ExerciseDB()
-    var exercise: [ExerciseLocal] = []
-
+    var exercise: [ExerciseProfiles] = []
+    var exerciseLocalDB: [ExerciseProfiles] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +26,13 @@ class ExerciseViewController: UIViewController {
     @IBAction func writeDataToDB(_ sender: Any) {
         print("Пробуем записать в базу")
         exerciseDB.addData(exercise)
+    }
+    @IBAction func readDataFromDB(_ sender: Any) {
+        exerciseLocalDB = exerciseDB.fetch()
+        print(exerciseLocalDB)
+    }
+    @IBAction func deletaAllDB(_ sender: Any) {
+        exerciseDB.delete()
     }
 }
 

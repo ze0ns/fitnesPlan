@@ -4,17 +4,17 @@
 //   let exercises = try? newJSONDecoder().decode(Exercises.self, from: jsonData)
 
 import Foundation
-
+import RealmSwift
 
 // MARK: - Exercise
 //Модель данных используемая для созранения списка упражнений с сервера
-class ExerciseProfiles: Codable {
-    let  id: Int
-    let  name: String
-    let  exerciseDescription: String?
-    let  createdBy, updatedBy: AtedBy
-    let  createdAt, updatedAt: String?
-    let  movie: String?
+class ExerciseProfiles: Object, Codable {
+    @objc dynamic var id: Int
+    @objc dynamic var name: String
+    @objc dynamic var exerciseDescription: String?
+    @objc dynamic var createdBy, updatedBy: AtedByE?
+    @objc dynamic var createdAt, updatedAt: String?
+    @objc dynamic var movie: String?
 
     enum CodingKeys: String, CodingKey {
         case id, name
@@ -25,4 +25,9 @@ class ExerciseProfiles: Codable {
         case updatedAt = "updated_at"
         case movie
     }
+}
+class AtedByE: Object, Codable {
+    @objc dynamic var  username: String?
+    @objc dynamic var  id: Int
+    @objc dynamic var  lastname, firstname: String
 }

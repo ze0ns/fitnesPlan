@@ -15,7 +15,6 @@
 		065CA89E27A6F11100D0693D /* ExercisesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065CA89D27A6F11100D0693D /* ExercisesModel.swift */; };
 		065F094E27ABBE16004E542E /* TrainingModelLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065F094D27ABBE16004E542E /* TrainingModelLocal.swift */; };
 		065F095027ABE19F004E542E /* ExerciseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065F094F27ABE19F004E542E /* ExerciseAPI.swift */; };
-		065F095227ABF07A004E542E /* ExercisesLocalDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065F095127ABF07A004E542E /* ExercisesLocalDB.swift */; };
 		0675E338278ADBF4008E3B09 /* HomeTraningPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0675E337278ADBF4008E3B09 /* HomeTraningPage.swift */; };
 		067CB45B278B0B730073FE78 /* SecondDayTraining.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067CB45A278B0B730073FE78 /* SecondDayTraining.swift */; };
 		067CB45D278B0BC20073FE78 /* threeDayTrayning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067CB45C278B0BC20073FE78 /* threeDayTrayning.swift */; };
@@ -42,7 +41,6 @@
 		065CA89D27A6F11100D0693D /* ExercisesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesModel.swift; sourceTree = "<group>"; };
 		065F094D27ABBE16004E542E /* TrainingModelLocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingModelLocal.swift; sourceTree = "<group>"; };
 		065F094F27ABE19F004E542E /* ExerciseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseAPI.swift; sourceTree = "<group>"; };
-		065F095127ABF07A004E542E /* ExercisesLocalDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesLocalDB.swift; sourceTree = "<group>"; };
 		0675E337278ADBF4008E3B09 /* HomeTraningPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTraningPage.swift; sourceTree = "<group>"; };
 		067CB45A278B0B730073FE78 /* SecondDayTraining.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondDayTraining.swift; sourceTree = "<group>"; };
 		067CB45C278B0BC20073FE78 /* threeDayTrayning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = threeDayTrayning.swift; sourceTree = "<group>"; };
@@ -97,7 +95,6 @@
 				06B7278427A80A4500BCE869 /* ExercisesLocal.swift */,
 				06569EF127AB959800E71F20 /* TrainingPlanModel.swift */,
 				065F094D27ABBE16004E542E /* TrainingModelLocal.swift */,
-				065F095127ABF07A004E542E /* ExercisesLocalDB.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -314,7 +311,6 @@
 				060516A627A6B3ED00D1CE01 /* Session.swift in Sources */,
 				065F094E27ABBE16004E542E /* TrainingModelLocal.swift in Sources */,
 				065CA89C27A6ECE300D0693D /* Data+PrettyJSON.swift in Sources */,
-				065F095227ABF07A004E542E /* ExercisesLocalDB.swift in Sources */,
 				065CA89E27A6F11100D0693D /* ExercisesModel.swift in Sources */,
 				06B7278027A7EF8A00BCE869 /* UserProfile.swift in Sources */,
 			);

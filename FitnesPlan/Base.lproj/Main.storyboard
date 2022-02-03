@@ -133,12 +133,30 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="muM-Da-4w8">
-                                <rect key="frame" x="61" y="406" width="294" height="31"/>
+                                <rect key="frame" x="60" y="360" width="294" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="write"/>
                                 <connections>
                                     <action selector="writeDataToDB:" destination="vr3-wk-Zd4" eventType="touchUpInside" id="D9f-Sg-fDr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lgy-vJ-Z1x">
+                                <rect key="frame" x="60" y="439" width="294" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="read"/>
+                                <connections>
+                                    <action selector="readDataFromDB:" destination="vr3-wk-Zd4" eventType="touchUpInside" id="L2g-g4-cUv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfa-4F-ylV">
+                                <rect key="frame" x="60" y="536" width="294" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="delete all"/>
+                                <connections>
+                                    <action selector="deletaAllDB:" destination="vr3-wk-Zd4" eventType="touchUpInside" id="88Y-aV-Nha"/>
                                 </connections>
                             </button>
                         </subviews>
