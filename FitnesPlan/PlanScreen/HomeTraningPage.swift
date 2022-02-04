@@ -1,6 +1,5 @@
 //
-//  SecondDayTraining.swift
-//
+//  HomeTraningPage.swift
 //  FitnesPlan
 //
 //  Created by Oschepkov Aleksandr Olegovich on 09.01.2022.
@@ -8,7 +7,7 @@
 
 import UIKit
 
-class SecondDayTraining: UIViewController,UITextFieldDelegate {
+class HomeTraningPage: UIViewController,UITextFieldDelegate {
     
     let repeatTextField1 = UITextField()
     let traningLabel1 = UILabel()
@@ -65,13 +64,13 @@ class SecondDayTraining: UIViewController,UITextFieldDelegate {
         super.viewDidLoad()
         
         
-        ServiceLabel(text: "Среда", x: 25, y: 80) //День тренировки
-        ServiceLabel(text: "12-01-2022", x: 170, y: 80) //Дата тренировки
+        ServiceLabel(text: "Понедельник", x: 25, y: 80) //День тренировки
+        ServiceLabel(text: "10-01-2022", x: 170, y: 80) //Дата тренировки
         
         //Тренировка 1
         traningLabel1.frame = CGRect(x: 25, y: 140, width: 200, height: 22)
         traningLabel1.textAlignment = .left
-        traningLabel1.text = "Приседания"
+        traningLabel1.text = "Жим лежа"
         traningLabel1.textColor = UIColor.black
         traningLabel1.font = UIFont.systemFont(ofSize: 22)
         traningLabel1.backgroundColor = UIColor.white
@@ -125,7 +124,7 @@ class SecondDayTraining: UIViewController,UITextFieldDelegate {
         //Тренировка 2
         traningLabel2.frame = CGRect(x: 25, y: 140+50, width: 200, height: 22)
         traningLabel2.textAlignment = .left
-        traningLabel2.text = "Сгиб ног сидя в тр."
+        traningLabel2.text = "Жим лежа на наклонной"
         traningLabel2.textColor = UIColor.black
         traningLabel2.font = UIFont.systemFont(ofSize: 22)
         traningLabel2.backgroundColor = UIColor.white
@@ -179,7 +178,7 @@ class SecondDayTraining: UIViewController,UITextFieldDelegate {
         //Тренировка 3
         traningLabel3.frame = CGRect(x: 25, y: 140+100, width: 200, height: 22)
         traningLabel3.textAlignment = .left
-        traningLabel3.text = "Разгиб ног сидя в тр."
+        traningLabel3.text = "Разводка на грудь"
         traningLabel3.textColor = UIColor.black
         traningLabel3.font = UIFont.systemFont(ofSize: 22)
         traningLabel3.backgroundColor = UIColor.white
@@ -233,7 +232,7 @@ class SecondDayTraining: UIViewController,UITextFieldDelegate {
         //Тренировка 4
         traningLabel4.frame = CGRect(x: 25, y: 140+150, width: 200, height: 22)
         traningLabel4.textAlignment = .left
-        traningLabel4.text = "Жим сидя гн."
+        traningLabel4.text = "Сгиб рук шт. стоя"
         traningLabel4.textColor = UIColor.black
         traningLabel4.font = UIFont.systemFont(ofSize: 22)
         traningLabel4.backgroundColor = UIColor.white
@@ -287,7 +286,7 @@ class SecondDayTraining: UIViewController,UITextFieldDelegate {
         //Тренировка 5
         traningLabel5.frame = CGRect(x: 25, y: 140+200, width: 200, height: 22)
         traningLabel5.textAlignment = .left
-        traningLabel5.text = "Махи гн. в сторону стоя"
+        traningLabel5.text = "Сгиб рук гн. с супинацией"
         traningLabel5.textColor = UIColor.black
         traningLabel5.font = UIFont.systemFont(ofSize: 22)
         traningLabel5.backgroundColor = UIColor.white
@@ -342,7 +341,7 @@ class SecondDayTraining: UIViewController,UITextFieldDelegate {
         //Тренировка 6
         traningLabel6.frame = CGRect(x: 25, y: 140+250, width: 200, height: 22)
         traningLabel6.textAlignment = .left
-        traningLabel6.text = "Махи гн. назад "
+        traningLabel6.text = "Сгиб рук в бл. стоя"
         traningLabel6.textColor = UIColor.black
         traningLabel6.font = UIFont.systemFont(ofSize: 22)
         traningLabel6.backgroundColor = UIColor.white
@@ -422,26 +421,26 @@ class SecondDayTraining: UIViewController,UITextFieldDelegate {
     }
     @objc func saveTraining(){
  
-        print(repeatTextField1.text)
-        print(repeatTextField2.text)
-        print(repeatTextField3.text)
-        print(repeatTextField4.text)
-        print(repeatTextField5.text)
-        print(repeatTextField6.text)
+        print(repeatTextField1.text as Any)
+        print(repeatTextField2.text as Any)
+        print(repeatTextField3.text as Any)
+        print(repeatTextField4.text as Any)
+        print(repeatTextField5.text as Any)
+        print(repeatTextField6.text as Any)
         
-        print(wayTextField1.text)
-        print(wayTextField2.text)
-        print(wayTextField3.text)
-        print(wayTextField4.text)
-        print(wayTextField5.text)
-        print(wayTextField6.text)
+        print(wayTextField1.text as Any)
+        print(wayTextField2.text as Any)
+        print(wayTextField3.text as Any)
+        print(wayTextField4.text as Any)
+        print(wayTextField5.text as Any)
+        print(wayTextField6.text as Any)
         
-        print(weightTextField1.text)
-        print(weightTextField2.text)
-        print(weightTextField3.text)
-        print(weightTextField4.text)
-        print(weightTextField5.text)
-        print(weightTextField6.text)
+        print(weightTextField1.text as Any)
+        print(weightTextField2.text as Any)
+        print(weightTextField3.text as Any)
+        print(weightTextField4.text as Any)
+        print(weightTextField5.text as Any)
+        print(weightTextField6.text as Any)
    
     }
 }
