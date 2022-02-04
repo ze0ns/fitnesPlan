@@ -8,20 +8,22 @@
 //   let trainingPlan = try? newJSONDecoder().decode(TrainingPlan.self, from: jsonData)
 
 import Foundation
+import RealmSwift
+
 
 // MARK: - TrainingPlanElement
-struct TrainingPlanElement: Codable {
-    let id, replay: Int
-    let trainingPlanDescription: String?
-    let exercise: Exercise
-    let createdAt: String
-    let createdBy: AtedByPlan
-    let weight: Double
-    let date, updatedAt: String
-    let updatedBy: AtedByPlan
-    let user: User
-    let analize: String?
-    let counter: Int
+class TrainingPlanElement:Object, Codable {
+    @objc dynamic var id, replay: Int
+    @objc dynamic var trainingPlanDescription: String?
+    @objc dynamic var exercise: ExercisePlan?
+    @objc dynamic var createdAt: String
+    @objc dynamic var createdBy: AtedByPlan?
+    @objc dynamic var weight: Double
+    @objc dynamic var date, updatedAt: String
+    @objc dynamic var updatedBy: AtedByPlan?
+    @objc dynamic var user: User?
+    @objc dynamic var analize: String?
+    @objc dynamic var counter: Int
 
     enum CodingKeys: String, CodingKey {
         case id, replay
@@ -37,20 +39,20 @@ struct TrainingPlanElement: Codable {
 }
 
 // MARK: - AtedBy
-struct AtedByPlan: Codable {
-    let username: JSONNull?
-    let id: Int
-    let lastname: String?
-    let firstname: String?
+class AtedByPlan: Object, Codable {
+    @objc dynamic var username: String?
+    @objc dynamic var id: Int
+    @objc dynamic var lastname: String?
+    @objc dynamic var firstname: String?
 }
 
 // MARK: - Exercise
-struct Exercise: Codable {
-    let movie: JSONNull?
-    let id, createdBy: Int
-    let name: String
-    let exerciseDescription: String?
-    let updatedBy: Int
+class ExercisePlan: Object, Codable {
+    @objc dynamic var movie: String?
+    @objc dynamic var id, createdBy: Int
+    @objc dynamic var name: String
+    @objc dynamic var exerciseDescription: String?
+    @objc dynamic var updatedBy: Int
 
     enum CodingKeys: String, CodingKey {
         case movie, id
@@ -62,16 +64,16 @@ struct Exercise: Codable {
 }
 
 // MARK: - User
-struct User: Codable {
-    let id: Int
-    let provider: String
-    let blocked: Bool
-    let createdAt, surname: String
-    let createdBy: Int
-    let confirmed: Bool
-    let birthday, updatedAt, username: String
-    let role, updatedBy: Int
-    let email, name: String
+class User: Object,Codable {
+    @objc dynamic var id: Int
+    @objc dynamic var provider: String
+    @objc dynamic var blocked: Bool
+    @objc dynamic var createdAt, surname: String
+    @objc dynamic var createdBy: Int
+    @objc dynamic var confirmed: Bool
+    @objc dynamic var birthday, updatedAt, username: String
+    @objc dynamic var role, updatedBy: Int
+    @objc dynamic var email, name: String
 
     enum CodingKeys: String, CodingKey {
         case id, provider, blocked

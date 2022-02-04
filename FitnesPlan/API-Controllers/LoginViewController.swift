@@ -7,6 +7,7 @@
 import Strapi_iOS
 import UIKit
 
+
 class LoginViewController: UIViewController {
     let strapi = Strapi.shared
     var data: Data?
@@ -35,6 +36,7 @@ class LoginViewController: UIViewController {
                     Session.shared.token = userProfile!.jwt
                     print("Получили токен ")
                     print(Session.shared.token)
+
                 }catch{
                     print("Operations Error")
                     print(error)

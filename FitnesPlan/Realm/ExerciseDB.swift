@@ -8,8 +8,6 @@
 import Foundation
 import RealmSwift
 
-
-
 class ExerciseDB {
 
      let config = Realm.Configuration(schemaVersion: 0)
@@ -38,18 +36,14 @@ class ExerciseDB {
          
         do {
             try mainRealm.commitWrite()
-            print(mainRealm.configuration.fileURL)
+            print(mainRealm.configuration.fileURL as Any)
         } catch {
             print(error.localizedDescription)
         }
      }
     func fetch() -> [ExerciseProfiles] {
-
              //Прочитать объекты
              let users = mainRealm.objects(ExerciseProfiles.self)
-
-             print(mainRealm.configuration.fileURL)
-
              return Array(users)
          }
     func delete () {

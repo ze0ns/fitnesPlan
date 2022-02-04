@@ -19,8 +19,6 @@ class ExerciseViewController: UIViewController {
         exerciseAPI.getExercise{[weak self]  users in
         self?.exercise = users!
         }
-     
-        
     }
   
     @IBAction func writeDataToDB(_ sender: Any) {

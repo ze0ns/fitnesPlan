@@ -55,6 +55,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I3E-IA-SJa">
+                                <rect key="frame" x="76" y="339" width="259" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="write"/>
+                                <connections>
+                                    <action selector="planDayWriteDB:" destination="3sp-5M-8Z8" eventType="touchUpInside" id="rCQ-Ks-qlJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TRy-IP-s6h">
+                                <rect key="frame" x="76" y="426" width="259" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="read"/>
+                                <connections>
+                                    <action selector="planDayReadDB:" destination="3sp-5M-8Z8" eventType="touchUpInside" id="7N4-MJ-eHa"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="v1Z-vX-WnB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
