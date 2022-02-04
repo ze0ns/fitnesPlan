@@ -4,6 +4,7 @@
 //
 //  Created by Oschepkov Aleksandr on 04.02.2022.
 //
+// Запрос для создания тренировки
 
 import Foundation
 import Strapi_iOS
