@@ -1,7 +1,12 @@
 //
 //  PlanDayViewController.swift
 //  FitnesPlan
-//
+//            "date": "2022-02-01",
+//"exercise": ["id": 3],
+//"replay": 8,
+//"counter": 3,
+//"weight": 70,
+//"description": "Тренировка 1",
 //  Created by Oschepkov Aleksandr on 31.01.2022.
 
 import Strapi_iOS
@@ -38,6 +43,6 @@ class PlanDayViewController: UIViewController {
     
     @IBAction func createExercises(_ sender: Any) {
         print("Пробуем создать запись")
-        createExerciseAPI.createPlan()
+        createExerciseAPI.createPlan(date: "2022-02-04", exercise: ["id": 3], replay: 9, counter: 4, weight: 75, description: "Проверка записи из контроллера")
     }
 }
