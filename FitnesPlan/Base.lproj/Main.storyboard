@@ -73,6 +73,15 @@
                                     <action selector="planDayReadDB:" destination="3sp-5M-8Z8" eventType="touchUpInside" id="7N4-MJ-eHa"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2QK-zi-3Ps">
+                                <rect key="frame" x="76" y="520" width="259" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <action selector="createExercises:" destination="3sp-5M-8Z8" eventType="touchUpInside" id="GQY-Kr-Cgh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="v1Z-vX-WnB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

@@ -16,6 +16,7 @@ class PlanDayViewController: UIViewController {
     let planDayDB  = PlanDayDB()
     var planDay: [TrainingPlanElement] = []
     var planDayLocalDB: [TrainingPlanElement] = []
+    var createExerciseAPI = CreateExerciseAPI()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,4 +36,8 @@ class PlanDayViewController: UIViewController {
         print(planDayLocalDB)
     }
     
+    @IBAction func createExercises(_ sender: Any) {
+        print("Пробуем создать запись")
+        createExerciseAPI.createPlan()
+    }
 }
