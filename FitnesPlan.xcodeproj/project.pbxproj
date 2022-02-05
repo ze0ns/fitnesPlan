@@ -132,13 +132,6 @@
 			path = PlanScreen;
 			sourceTree = "<group>";
 		};
-		0662981D27AE90AA000C225A /* calendar */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = calendar;
-			sourceTree = "<group>";
-		};
 		067D1C68278BE09C001C5DB2 /* Realm */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,7 +162,6 @@
 		06801B82278AD4CB00198E77 /* FitnesPlan */ = {
 			isa = PBXGroup;
 			children = (
-				0662981D27AE90AA000C225A /* calendar */,
 				065F095427AC06C1004E542E /* PlanScreen */,
 				065F095327AC06A1004E542E /* API-Controllers */,
 				06B7278327A80A0F00BCE869 /* Storage */,

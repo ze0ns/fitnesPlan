@@ -9,8 +9,7 @@ import Strapi_iOS
 import Foundation
 
 final class TrainingPlanApi{
-    ///Дата тренировки для запроса на сервер
-    var dataPlan = Session.shared.date
+    var planDate = "2022-02-06"
     var token = Session.shared.token
     var data: Data?
     var exercise: [TrainingPlanElement] = []
@@ -21,20 +20,17 @@ final class TrainingPlanApi{
         strapi.host = "fitness.zeons.ru"
         strapi.port = 443
         strapi.token = token
-        
+        planDate = Session.shared.date
         
         let request = Request(
             method: "GET",
-            contentType: "day?date="+dataPlan // You can use any route here
+            contentType: "day?date="+planDate // You can use any route here
         )
     strapi.exec(request: request, needAuthentication: true) { response in
         guard let data = response.data else {return}
         self.data = data as? Data
         do{
-    //        print(self.data?.prettyJSON)
-            print("Парсим JSON упражнений")
-            
-            let trainingPlanJSON = try JSONDecoder().decode([TrainingPlanElement].self, from: self.data!)
+        let trainingPlanJSON = try JSONDecoder().decode([TrainingPlanElement].self, from: self.data!)
             print(trainingPlanJSON.count)
             comletion(trainingPlanJSON)
             

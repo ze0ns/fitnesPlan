@@ -61,7 +61,7 @@ class HomeTraningPage: UIViewController,UITextFieldDelegate {
 
     let planDayDB  = PlanDayDB()
     var planDayLocalDB: [TrainingPlanElement] = []
-
+    let createElement = CreateExerciseAPI()
     
     
     override func viewDidLoad() {
@@ -419,32 +419,59 @@ class HomeTraningPage: UIViewController,UITextFieldDelegate {
         button.addTarget(self, action: #selector(saveTraining), for: .touchDown)
         button.setTitle("Сохранить тренировку", for: .normal)
         button.layer.cornerRadius = 15
-        button.backgroundColor = UIColor(red: 0.11, green: 0.78, blue: 0.41, alpha: 1.00)
+       // button.backgroundColor = UIColor(red: 0.11, green: 0.78, blue: 0.41, alpha: 1.00)
+        button.backgroundColor = UIColor.blue
         button.tag = 5
         self.view.addSubview(button)
     }
     @objc func saveTraining(){
- 
-        print(repeatTextField1.text as Any)
-        print(repeatTextField2.text as Any)
-        print(repeatTextField3.text as Any)
-        print(repeatTextField4.text as Any)
-        print(repeatTextField5.text as Any)
-        print(repeatTextField6.text as Any)
         
-        print(wayTextField1.text as Any)
-        print(wayTextField2.text as Any)
-        print(wayTextField3.text as Any)
-        print(wayTextField4.text as Any)
-        print(wayTextField5.text as Any)
-        print(wayTextField6.text as Any)
+        let replay0: Int = Int(repeatTextField1.text! as String)!
+        let counter0: Int = Int(wayTextField1.text! as String)!
+        let weight0: Double = Double(weightTextField1.text! as String)!
+        let ExId0: Int = planDayLocalDB[0].exercise!.id
+        let exercise0: [String:Int] = ["id":ExId0]
+        let date:String = planDayLocalDB[0].date
         
-        print(weightTextField1.text as Any)
-        print(weightTextField2.text as Any)
-        print(weightTextField3.text as Any)
-        print(weightTextField4.text as Any)
-        print(weightTextField5.text as Any)
-        print(weightTextField6.text as Any)
+        let replay1: Int = Int(repeatTextField2.text! as String)!
+        let counter1: Int = Int(wayTextField2.text! as String)!
+        let weight1: Double = Double(weightTextField2.text! as String)!
+        let ExId1: Int = planDayLocalDB[1].exercise!.id
+        let exercise1: [String:Int] = ["id":ExId1]
+     
+        
+        let replay2: Int = Int(repeatTextField3.text! as String)!
+        let counter2: Int = Int(wayTextField3.text! as String)!
+        let weight2: Double = Double(weightTextField3.text! as String)!
+        let ExId2: Int = planDayLocalDB[2].exercise!.id
+        let exercise2: [String:Int] = ["id":ExId2]
+        
+        
+        let replay3: Int = Int(repeatTextField4.text! as String)!
+        let counter3: Int = Int(wayTextField4.text! as String)!
+        let weight3: Double = Double(weightTextField4.text! as String)!
+        let ExId3: Int = planDayLocalDB[3].exercise!.id
+        let exercise3: [String:Int] = ["id":ExId3]
+        
+     
+        let replay4: Int = Int(repeatTextField5.text! as String)!
+        let counter4: Int = Int(wayTextField5.text! as String)!
+        let weight4: Double = Double(weightTextField5.text! as String)!
+        let ExId4: Int = planDayLocalDB[4].exercise!.id
+        let exercise4: [String:Int] = ["id":ExId4]
+   
+        let replay5: Int = Int(repeatTextField6.text! as String)!
+        let counter5: Int = Int(wayTextField6.text! as String)!
+        let weight5: Double = Double(weightTextField6.text! as String)!
+        let ExId5: Int = planDayLocalDB[5].exercise!.id
+        let exercise5: [String:Int] = ["id":ExId5]
+        
+        createElement.createPlan(date: date, exercise: exercise0, replay: replay0, counter: counter0, weight: weight0, description: "")
+        createElement.createPlan(date: date, exercise: exercise1, replay: replay1, counter: counter1, weight: weight1, description: "")
+        createElement.createPlan(date: date, exercise: exercise2, replay: replay2, counter: counter2, weight: weight2, description: "")
+        createElement.createPlan(date: date, exercise: exercise3, replay: replay3, counter: counter3, weight: weight3, description: "")
+        createElement.createPlan(date: date, exercise: exercise4, replay: replay4, counter: counter4, weight: weight4, description: "")
+        createElement.createPlan(date: date, exercise: exercise5, replay: replay5, counter: counter5, weight: weight5, description: "")
    
     }
 }

@@ -15,20 +15,18 @@ class SelectDateViewController: UIViewController,CalendarViewDelegate {
     let planDayAPI = TrainingPlanApi()
     let planDayDB  = PlanDayDB()
     var planDay: [TrainingPlanElement] = []
+    var planDay1: [TrainingPlanElement] = []
+    var planDay2: [TrainingPlanElement] = []
     var planDayLocalDB: [TrainingPlanElement] = []
     var createExerciseAPI = CreateExerciseAPI()
     
     @IBOutlet weak var calendarView: CalendarView!
     
     @IBAction func loadPlan(_ sender: Any) {
-        planDayAPI.getPlanDay{[weak self]  users in
-        self?.planDay = users!
-        }
         exerciseDB.delete()
-        print("Дата")
-        print(Session.shared.date)
-        print("Пробуем записать в базу")
         planDayDB.addData(planDay)
+        planDayDB.addData(planDay1)
+        planDayDB.addData(planDay2)
     }
     
     @IBAction func beginTraning(_ sender: Any) {
@@ -54,10 +52,28 @@ class SelectDateViewController: UIViewController,CalendarViewDelegate {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "YYYY-MM-dd" // Устанавливаем формат даты
         Session.shared.date = dateFormatter.string(from: date) // Конвертируем в строку
-        print(Session.shared.date)
+        print("Грузим понедельник")
+        planDayAPI.getPlanDay{[weak self]  users in
+        self?.planDay = users!
+        }
+        
+         
+        let nextDate = Calendar.current.date(byAdding: .day, value: 2, to: date)
+        Session.shared.date = dateFormatter.string(from: nextDate!)
+        print("Грузим среда")
+        planDayAPI.getPlanDay{[weak self]  users in
+        self?.planDay1 = users!
+        }
+        
+        let nextDate1 = Calendar.current.date(byAdding: .day, value: 4, to: date)
+        Session.shared.date = dateFormatter.string(from: nextDate1!)
+        print("Грузим пятницу")
+        planDayAPI.getPlanDay{[weak self]  users in
+        self?.planDay2 = users!
+        }
         
     }
-
+    
     
     
 }
