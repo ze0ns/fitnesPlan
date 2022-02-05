@@ -37,8 +37,11 @@ class PlanDayViewController: UIViewController {
     
     @IBAction func planDayReadDB(_ sender: Any) {
         print("Читаем данные из базы")
-        planDayLocalDB = planDayDB.fetch()
-        print(planDayLocalDB)
+//        planDayLocalDB = planDayDB.fetch()
+//        print(planDayLocalDB)
+    
+        guard let photosVC = storyboard?.instantiateViewController(withIdentifier: "HomeTraningPage") else {return}
+        self.navigationController?.pushViewController(photosVC, animated: true)
     }
     
     @IBAction func createExercises(_ sender: Any) {

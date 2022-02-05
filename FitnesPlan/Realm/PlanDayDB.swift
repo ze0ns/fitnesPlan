@@ -21,10 +21,11 @@ class PlanDayDB {
         
          PlanDayLocal = planDayLocal
         let planDay = TrainingPlanElement()
-        let e = self.PlanDayLocal.count
+        let count = self.PlanDayLocal.count
         var i = 0
+         print(count)
         mainRealm.beginWrite()
-         while i < e {
+         while i < count {
              planDay.id = self.PlanDayLocal[i].id
              planDay.exercise = self.PlanDayLocal[i].exercise
              planDay.replay = self.PlanDayLocal[i].replay
@@ -46,6 +47,7 @@ class PlanDayDB {
      }
     func fetch() -> [TrainingPlanElement] {
              //Прочитать объекты
+             print(mainRealm.configuration.fileURL as Any)
              let users = mainRealm.objects(TrainingPlanElement.self)
              return Array(users)
          }

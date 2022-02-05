@@ -35,6 +35,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="ПНД" selectedImage="monday" id="2uy-Rw-lAU"/>
+                    <navigationItem key="navigationItem" id="2S3-mm-gvD"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xih-xD-cYv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -135,9 +136,32 @@
                                     <segue destination="3sp-5M-8Z8" kind="show" id="iZN-aa-L7E"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sAM-mD-9Kz">
+                                <rect key="frame" x="168" y="633" width="67" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <segue destination="tZt-yb-SrX" kind="presentation" modalPresentationStyle="fullScreen" id="ShE-Nd-9mS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZD0-Hs-pgj">
+                                <rect key="frame" x="168" y="631" width="67" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <action selector="buttonAny:" destination="L34-VJ-eWd" eventType="touchUpInside" id="obz-iK-721"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cx4-6x-N1B"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="ZD0-Hs-pgj"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N73-nA-Q0A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -194,12 +218,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WvV-va-8Ws" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1878.2608695652175" y="115.84821428571428"/>
+            <point key="canvasLocation" x="-1765" y="-256"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="jli-Ha-e63">
             <objects>
                 <tabBarController id="tZt-yb-SrX" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="zVt-zD-n0H"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Cc8-77-CNn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

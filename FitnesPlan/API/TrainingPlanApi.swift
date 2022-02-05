@@ -35,6 +35,7 @@ final class TrainingPlanApi{
             print("Парсим JSON упражнений")
             
             let trainingPlanJSON = try JSONDecoder().decode([TrainingPlanElement].self, from: self.data!)
+            print(trainingPlanJSON.count)
             comletion(trainingPlanJSON)
             
         } catch DecodingError.keyNotFound(let key, let context) {
