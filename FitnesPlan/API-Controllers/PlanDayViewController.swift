@@ -12,7 +12,8 @@
 import Strapi_iOS
 import UIKit
 
-class PlanDayViewController: UIViewController {
+
+class PlanDayViewController: UIViewController{
    
     ///Дата тренировки для запроса на сервер
     var dataPlan: String = "2022-02-06"
@@ -23,12 +24,14 @@ class PlanDayViewController: UIViewController {
     var planDayLocalDB: [TrainingPlanElement] = []
     var createExerciseAPI = CreateExerciseAPI()
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
         planDayAPI.getPlanDay{[weak self]  users in
         self?.planDay = users!
         }
     }
+    
     
     @IBAction func planDayWriteDB(_ sender: Any) {
         print("Пробуем записать в базу")

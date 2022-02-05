@@ -9,6 +9,7 @@ target 'FitnesPlan' do
   pod 'Strapi-iOS'
   pod 'DropDown'
   pod 'DynamicJSON'
+  pod 'CalendarSwift'
   
   # Pods for FitnesPlan
 
