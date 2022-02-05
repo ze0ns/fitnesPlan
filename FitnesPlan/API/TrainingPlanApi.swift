@@ -10,7 +10,7 @@ import Foundation
 
 final class TrainingPlanApi{
     ///Дата тренировки для запроса на сервер
-    var dataPlan: String = "2022-02-06"
+    var dataPlan = Session.shared.date
     var token = Session.shared.token
     var data: Data?
     var exercise: [TrainingPlanElement] = []

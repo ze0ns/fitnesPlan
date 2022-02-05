@@ -14,4 +14,5 @@ final class Session{
     var token: String = "" //Token VK
     var userId: Int = 0    //ID пользователя
     var userProfile: UserProfile?
+    var date: String = "2022-02-06"
 }
