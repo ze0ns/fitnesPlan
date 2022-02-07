@@ -29,6 +29,9 @@
 		82576DD5277470BE003A40B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82576DD4277470BE003A40B1 /* Assets.xcassets */; };
 		82576DD8277470BE003A40B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82576DD6277470BE003A40B1 /* LaunchScreen.storyboard */; };
 		826183F12785153600F554F9 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826183F02785153600F554F9 /* TimerViewController.swift */; };
+		826611A527B1A9FD0011F7A0 /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826611A427B1A9FD0011F7A0 /* CustomAlert.swift */; };
+		826611A727B1AABA0011F7A0 /* UIView + Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826611A627B1AABA0011F7A0 /* UIView + Message.swift */; };
+		826611A927B1AE1D0011F7A0 /* sport.gif in Resources */ = {isa = PBXBuildFile; fileRef = 826611A827B1AE1D0011F7A0 /* sport.gif */; };
 		82710C2E278FF9FA00FC2E8E /* complete.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 82710C2D278FF9FA00FC2E8E /* complete.mp3 */; };
 		82710C30278FFA0F00FC2E8E /* save.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 82710C2F278FFA0F00FC2E8E /* save.mp3 */; };
 		82710C32278FFA3400FC2E8E /* delete.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 82710C31278FFA3400FC2E8E /* delete.mp3 */; };
@@ -37,7 +40,6 @@
 		8285115927A97C3B00D67B2C /* customModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8285115527A97C3B00D67B2C /* customModel.swift */; };
 		8287784127948A1D00FE442B /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8287784027948A1D00FE442B /* Gradient.swift */; };
 		8287784327948C7000FE442B /* GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8287784227948C7000FE442B /* GIF.swift */; };
-		8292BFC827B188D9002B3EC8 /* sport.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8292BFC727B188D9002B3EC8 /* sport.gif */; };
 		82F4B0E427B126CF00F3661D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F4B0E327B126CF00F3661D /* ProfileViewController.swift */; };
 		82F4B0E727B12D6100F3661D /* SaveUserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F4B0E627B12D6100F3661D /* SaveUserInfoViewController.swift */; };
 		82F4B0EC27B139D300F3661D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F4B0EB27B139D300F3661D /* HomeViewController.swift */; };
@@ -72,6 +74,9 @@
 		82576DD7277470BE003A40B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		82576DD9277470BE003A40B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		826183F02785153600F554F9 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		826611A427B1A9FD0011F7A0 /* CustomAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
+		826611A627B1AABA0011F7A0 /* UIView + Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Message.swift"; sourceTree = "<group>"; };
+		826611A827B1AE1D0011F7A0 /* sport.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = sport.gif; path = "../../../../../Фитнес/sport.gif"; sourceTree = "<group>"; };
 		82710C2D278FF9FA00FC2E8E /* complete.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = complete.mp3; path = "../../../../../../Music/Music/Media.localized/Unknown Artist/Unknown Album/complete.mp3"; sourceTree = "<group>"; };
 		82710C2F278FFA0F00FC2E8E /* save.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = save.mp3; path = "../../../../../../Music/Music/Media.localized/Unknown Artist/Unknown Album/save.mp3"; sourceTree = "<group>"; };
 		82710C31278FFA3400FC2E8E /* delete.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = delete.mp3; path = "../../../../../../Music/Music/Media.localized/Unknown Artist/Unknown Album/delete.mp3"; sourceTree = "<group>"; };
@@ -80,7 +85,6 @@
 		8285115527A97C3B00D67B2C /* customModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customModel.swift; sourceTree = "<group>"; };
 		8287784027948A1D00FE442B /* Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
 		8287784227948C7000FE442B /* GIF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIF.swift; sourceTree = "<group>"; };
-		8292BFC727B188D9002B3EC8 /* sport.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = sport.gif; path = "../../../../../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/sport.gif"; sourceTree = "<group>"; };
 		82F4B0E327B126CF00F3661D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		82F4B0E627B12D6100F3661D /* SaveUserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveUserInfoViewController.swift; sourceTree = "<group>"; };
 		82F4B0EB27B139D300F3661D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -157,7 +161,7 @@
 		823BD10527ABAC1600C88DAB /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				8292BFC727B188D9002B3EC8 /* sport.gif */,
+				826611A827B1AE1D0011F7A0 /* sport.gif */,
 				82F4B0F627B170D000F3661D /* SpringImage.swift */,
 			);
 			path = Images;
@@ -166,6 +170,7 @@
 		82576DBF277470BC003A40B1 = {
 			isa = PBXGroup;
 			children = (
+				826611A327B1A9EE0011F7A0 /* Alert */,
 				82F4B0EB27B139D300F3661D /* HomeViewController.swift */,
 				82F4B0E527B12D4E00F3661D /* Profile */,
 				82242ED227AEE73C005F02A5 /* DB */,
@@ -204,6 +209,15 @@
 				82576DD9277470BE003A40B1 /* Info.plist */,
 			);
 			path = "Sport 2022";
+			sourceTree = "<group>";
+		};
+		826611A327B1A9EE0011F7A0 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				826611A427B1A9FD0011F7A0 /* CustomAlert.swift */,
+				826611A627B1AABA0011F7A0 /* UIView + Message.swift */,
+			);
+			path = Alert;
 			sourceTree = "<group>";
 		};
 		82710C2C278FF9D300FC2E8E /* Sounds */ = {
@@ -354,9 +368,9 @@
 				82710C2E278FF9FA00FC2E8E /* complete.mp3 in Resources */,
 				82710C32278FFA3400FC2E8E /* delete.mp3 in Resources */,
 				82576DD5277470BE003A40B1 /* Assets.xcassets in Resources */,
-				8292BFC827B188D9002B3EC8 /* sport.gif in Resources */,
 				82576DD3277470BC003A40B1 /* Main.storyboard in Resources */,
 				82710C30278FFA0F00FC2E8E /* save.mp3 in Resources */,
+				826611A927B1AE1D0011F7A0 /* sport.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +427,7 @@
 				82242ED427AEE749005F02A5 /* ExerciseDB.swift in Sources */,
 				8212804227AC838D00EDCE44 /* ExerciseViewController.swift in Sources */,
 				821C31082777232500501189 /* EntryViewController3.swift in Sources */,
+				826611A727B1AABA0011F7A0 /* UIView + Message.swift in Sources */,
 				824D0D1627AAFC36006305D7 /* PrettyJSON.swift in Sources */,
 				8287784127948A1D00FE442B /* Gradient.swift in Sources */,
 				82F4B0F727B170D000F3661D /* SpringImage.swift in Sources */,
@@ -427,6 +442,7 @@
 				82F4B0EC27B139D300F3661D /* HomeViewController.swift in Sources */,
 				821C31122777305600501189 /* EntryViewController5.swift in Sources */,
 				8282AA2E2776988C009471C5 /* EntryViewController.swift in Sources */,
+				826611A527B1A9FD0011F7A0 /* CustomAlert.swift in Sources */,
 				826183F12785153600F554F9 /* TimerViewController.swift in Sources */,
 				822781F427AD5B82001E6916 /* TrainingPlanApi.swift in Sources */,
 				8212803827AC827500EDCE44 /* UserProfile.swift in Sources */,

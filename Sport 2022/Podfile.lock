@@ -6,11 +6,13 @@ PODS:
   - RealmSwift (10.12.0):
     - Realm (= 10.12.0)
   - Strapi-iOS (0.1.1)
+  - SwiftEntryKit (2.0.0)
 
 DEPENDENCIES:
   - CalendarSwift
   - RealmSwift
   - Strapi-iOS
+  - SwiftEntryKit
 
 SPEC REPOS:
   trunk:
@@ -18,13 +20,15 @@ SPEC REPOS:
     - Realm
     - RealmSwift
     - Strapi-iOS
+    - SwiftEntryKit
 
 SPEC CHECKSUMS:
   CalendarSwift: 37ab02721718952d5eb5e369cac7ab2414e08625
   Realm: 32488213acb44660539c619d620cec1bac046166
   RealmSwift: 0abdca6231d5ff8a4f84cef9c1121ef95a483faf
   Strapi-iOS: 9b9ac09434f1798d2fcbedd2c0fa812349ff0252
+  SwiftEntryKit: 61b5fa36f34a97dd8013e48a7345bc4c4720be9a
 
-PODFILE CHECKSUM: 07e4ff9b679cccf5075c41312a77a3aaeaa23250
+PODFILE CHECKSUM: 0098888b4c48b8c97ef08989d64c67e915aa90e5
 
 COCOAPODS: 1.10.2
