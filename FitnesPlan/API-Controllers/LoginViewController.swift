@@ -23,13 +23,11 @@ class LoginViewController: UIViewController {
         strapi.login(
             identifier: "zeons@mail.ru",
             password: "P@ssw0rd") { response in
-          //  guard let record = response.data as? [String: Any] else {return}
-                guard let record = response.data  else {return}
-                self.data = record as? Data
-                //print(self.data?.prettyJSON)
-                print("Получили ответ, декодим JSON, присвоили его переменным")
+                guard let record = response.data as? Data  else {return}
+                self.data = record
                 
-              //  Session.shared.userProfile = record
+                print("Получили ответ, декодим JSON, присвоили его переменным")
+
                 do{
                     let userProfile = try? JSONDecoder().decode(UserProfile.self, from: self.data!)
                     Session.shared.userProfile = userProfile
