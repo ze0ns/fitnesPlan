@@ -114,16 +114,20 @@ class LoginViewController: UIViewController {
                     print(error)
               }
            }
-        } else {
+        } else if EmailTextField.text == ""  && PassWordTextField.text == "" {
             print("введите данные")
-            showAlertTapped()
+            showAlertPassWordAndEmail()
+        } else if EmailTextField.text == "" {
+            showAlertEmail()
+        } else if PassWordTextField.text == "" {
+            showAlertPassWord()
         }
     }
     
-    func showAlertTapped() {
+    func showAlertEmail() {
 
             // create the alert
-            let alert = UIAlertController(title: "Ошибка", message: "Введите логин или пароль.", preferredStyle: UIAlertController.Style.alert)
+            let alert = UIAlertController(title: "Ошибка", message: "Введите логин.", preferredStyle: UIAlertController.Style.alert)
 
             // add an action (button)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
@@ -131,6 +135,31 @@ class LoginViewController: UIViewController {
             // show the alert
             self.present(alert, animated: true, completion: nil)
         }
+    
+    func showAlertPassWord() {
+
+            // create the alert
+            let alert = UIAlertController(title: "Ошибка", message: "Введите пароль.", preferredStyle: UIAlertController.Style.alert)
+
+            // add an action (button)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+
+            // show the alert
+            self.present(alert, animated: true, completion: nil)
+        }
+    
+    func showAlertPassWordAndEmail() {
+
+            // create the alert
+            let alert = UIAlertController(title: "Ошибка", message: "Введите логин и пароль.", preferredStyle: UIAlertController.Style.alert)
+
+            // add an action (button)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+
+            // show the alert
+            self.present(alert, animated: true, completion: nil)
+        }
+    
 
     
     @IBAction func register() {
@@ -145,8 +174,8 @@ class LoginViewController: UIViewController {
             email: EmailTextField.text!,
             password: PassWordTextField.text!) { response in
                 //  guard let record = response.data as? [String: Any] else {return}
-                guard let record = response.data  else {return}
-                self.data = record as? Data
+                      guard let record = response.data  else {return}
+                      self.data = record as? Data
                       print(self.data?.prettyJSON)
                       print("Получили ответ, декодим JSON, присвоили его переменным")
                       
@@ -165,11 +194,15 @@ class LoginViewController: UIViewController {
                       }catch{
                           print("Operations Error")
                           print(error)
-                  }
-            }
-        } else {
-            print("введите данные")
-            showAlertTapped()
+                    }
+                 }
+              } else if EmailTextField.text == ""  && PassWordTextField.text == "" {
+                  print("введите данные")
+                  showAlertPassWordAndEmail()
+              } else if EmailTextField.text == "" {
+                  showAlertEmail()
+              } else if PassWordTextField.text == "" {
+                  showAlertPassWord()
        }
     }
 }
