@@ -21,13 +21,12 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Начало работы программы")
         SportImage.loadGif(name: "sport")
         // Жест нажатия
         let hideKeyboardGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         // Присваиваем его UIScrollVIew
         ScrollView?.addGestureRecognizer(hideKeyboardGesture)
-        
+        SportImage.layer.borderWidth = 5
     }
     
     
@@ -111,16 +110,38 @@ class LoginViewController: UIViewController {
                 }catch{
                     print("Operations Error")
                     print(error)
-                }
-                
-          }
+            }
+        }
     }
-    
-    
-    private func showHomeVC() {
-        
-        guard let vc = storyboard?.instantiateViewController(identifier: "HomeViewController") else {return}
-        guard let window = self.view.window else {return}
-        window.rootViewController = vc
-    }
+
+    @IBAction func register() {
+        strapi.register(
+            username: "My name",
+            email: EmailTextField.text!,
+            password: PassWordTextField.text!) { response in
+                //  guard let record = response.data as? [String: Any] else {return}
+                guard let record = response.data  else {return}
+                self.data = record as? Data
+                      print(self.data?.prettyJSON)
+                      print("Получили ответ, декодим JSON, присвоили его переменным")
+                      
+                    //  Session.shared.userProfile = record
+                      do{
+                          let userProfile = try? JSONDecoder().decode(UserProfile.self, from: self.data!)
+                          Session.shared.userProfile = userProfile
+                          Session.shared.token = userProfile!.jwt
+                          print("Получили токен ")
+                          print(Session.shared.token)
+                          DispatchQueue.main.async {
+                              guard let vc = self.storyboard?.instantiateViewController(identifier: "HomeViewController") else {return}
+                              guard let window = self.view.window else {return}
+                              window.rootViewController = vc
+                          }
+                      }catch{
+                          print("Operations Error")
+                          print(error)
+                  }
+            }
+        }
+
   }

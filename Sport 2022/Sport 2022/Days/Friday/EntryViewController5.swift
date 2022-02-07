@@ -466,7 +466,7 @@ class EntryViewController5: UIViewController,UITextFieldDelegate {
         let replay5: Int = Int(repeatTextField6.text! as String)!
         let counter5: Int = Int(wayTextField6.text! as String)!
         let weight5: Double = Double(weightTextField6.text! as String)!
-        let ExId5: Int = planDayLocalDB[17].exercise!.id
+        let ExId5: Int = planDayLocalDB[16].exercise!.id
         let exercise5: [String:Int] = ["id":ExId5]
         
         createElement.createPlan(date: date, exercise: exercise0, replay: replay0, counter: counter0, weight: weight0, description: "")

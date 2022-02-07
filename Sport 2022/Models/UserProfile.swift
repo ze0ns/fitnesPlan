@@ -17,9 +17,9 @@ struct UserProfile: Codable {
 struct UserP: Codable {
     let id: Int
     let provider: String
-    let blocked: Bool
+    let blocked: JSONNull?
     let createdAt, surname: String
-    let createdBy: AtedBy
+    let createdBy: JSONNull?
     let confirmed: Bool
     let birthday, updatedAt, username: String
     let role: Role
