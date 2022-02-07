@@ -86,6 +86,8 @@ class LoginViewController: UIViewController {
         strapi.host = "fitness.zeons.ru"
         strapi.port = 443
         
+        if EmailTextField.text != "" && PassWordTextField.text != "" {
+        
         strapi.login(
             identifier:  EmailTextField.text!,
             password: PassWordTextField.text!) { response in
@@ -110,11 +112,34 @@ class LoginViewController: UIViewController {
                 }catch{
                     print("Operations Error")
                     print(error)
-            }
+              }
+           }
+        } else {
+            print("введите данные")
+            showAlertTapped()
         }
     }
+    
+    func showAlertTapped() {
 
+            // create the alert
+            let alert = UIAlertController(title: "Ошибка", message: "Введите логин или пароль.", preferredStyle: UIAlertController.Style.alert)
+
+            // add an action (button)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+
+            // show the alert
+            self.present(alert, animated: true, completion: nil)
+        }
+
+    
     @IBAction func register() {
+        
+        strapi.scheme = "https"
+        strapi.host = "fitness.zeons.ru"
+        strapi.port = 443
+        
+        if EmailTextField.text != "" && PassWordTextField.text != "" {
         strapi.register(
             username: "My name",
             email: EmailTextField.text!,
@@ -142,6 +167,9 @@ class LoginViewController: UIViewController {
                           print(error)
                   }
             }
-        }
-
-  }
+        } else {
+            print("введите данные")
+            showAlertTapped()
+       }
+    }
+}

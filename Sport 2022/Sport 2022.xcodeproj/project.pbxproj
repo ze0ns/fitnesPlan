@@ -37,11 +37,11 @@
 		8285115927A97C3B00D67B2C /* customModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8285115527A97C3B00D67B2C /* customModel.swift */; };
 		8287784127948A1D00FE442B /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8287784027948A1D00FE442B /* Gradient.swift */; };
 		8287784327948C7000FE442B /* GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8287784227948C7000FE442B /* GIF.swift */; };
+		8292BFC827B188D9002B3EC8 /* sport.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8292BFC727B188D9002B3EC8 /* sport.gif */; };
+		8292BFCB27B18A13002B3EC8 /* ThemesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8292BFCA27B18A13002B3EC8 /* ThemesViewController.swift */; };
 		82F4B0E427B126CF00F3661D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F4B0E327B126CF00F3661D /* ProfileViewController.swift */; };
 		82F4B0E727B12D6100F3661D /* SaveUserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F4B0E627B12D6100F3661D /* SaveUserInfoViewController.swift */; };
 		82F4B0EC27B139D300F3661D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F4B0EB27B139D300F3661D /* HomeViewController.swift */; };
-		82F4B0F027B167AB00F3661D /* sport.gif in Resources */ = {isa = PBXBuildFile; fileRef = 82F4B0EF27B167AA00F3661D /* sport.gif */; };
-		82F4B0F527B1705F00F3661D /* spring.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 82F4B0F427B1705F00F3661D /* spring.mp3 */; };
 		82F4B0F727B170D000F3661D /* SpringImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F4B0F627B170D000F3661D /* SpringImage.swift */; };
 		D8D4895BCF01039A3879B2D8 /* Pods_Sport_2022.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD59EB16C9E805A31A8BE446 /* Pods_Sport_2022.framework */; };
 /* End PBXBuildFile section */
@@ -81,11 +81,11 @@
 		8285115527A97C3B00D67B2C /* customModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customModel.swift; sourceTree = "<group>"; };
 		8287784027948A1D00FE442B /* Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
 		8287784227948C7000FE442B /* GIF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIF.swift; sourceTree = "<group>"; };
+		8292BFC727B188D9002B3EC8 /* sport.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = sport.gif; path = "../../../../../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/sport.gif"; sourceTree = "<group>"; };
+		8292BFCA27B18A13002B3EC8 /* ThemesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemesViewController.swift; sourceTree = "<group>"; };
 		82F4B0E327B126CF00F3661D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		82F4B0E627B12D6100F3661D /* SaveUserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveUserInfoViewController.swift; sourceTree = "<group>"; };
 		82F4B0EB27B139D300F3661D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		82F4B0EF27B167AA00F3661D /* sport.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = sport.gif; path = ../../../../../sport.gif; sourceTree = "<group>"; };
-		82F4B0F427B1705F00F3661D /* spring.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = spring.mp3; path = ../../../../../../Downloads/spring.mp3; sourceTree = "<group>"; };
 		82F4B0F627B170D000F3661D /* SpringImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringImage.swift; sourceTree = "<group>"; };
 		AD59EB16C9E805A31A8BE446 /* Pods_Sport_2022.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sport_2022.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -159,7 +159,8 @@
 		823BD10527ABAC1600C88DAB /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				82F4B0EF27B167AA00F3661D /* sport.gif */,
+				8292BFC727B188D9002B3EC8 /* sport.gif */,
+				82F4B0F627B170D000F3661D /* SpringImage.swift */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -167,8 +168,7 @@
 		82576DBF277470BC003A40B1 = {
 			isa = PBXGroup;
 			children = (
-				82F4B0F627B170D000F3661D /* SpringImage.swift */,
-				82F4B0F327B16F7900F3661D /* Sound */,
+				8292BFC927B189FC002B3EC8 /* Themes */,
 				82F4B0EB27B139D300F3661D /* HomeViewController.swift */,
 				82F4B0E527B12D4E00F3661D /* Profile */,
 				82242ED227AEE73C005F02A5 /* DB */,
@@ -247,6 +247,14 @@
 			path = Design;
 			sourceTree = "<group>";
 		};
+		8292BFC927B189FC002B3EC8 /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				8292BFCA27B18A13002B3EC8 /* ThemesViewController.swift */,
+			);
+			path = Themes;
+			sourceTree = "<group>";
+		};
 		82CBF8E32775C8F8009B9926 /* Days */ = {
 			isa = PBXGroup;
 			children = (
@@ -283,14 +291,6 @@
 				82F4B0E627B12D6100F3661D /* SaveUserInfoViewController.swift */,
 			);
 			path = Profile;
-			sourceTree = "<group>";
-		};
-		82F4B0F327B16F7900F3661D /* Sound */ = {
-			isa = PBXGroup;
-			children = (
-				82F4B0F427B1705F00F3661D /* spring.mp3 */,
-			);
-			path = Sound;
 			sourceTree = "<group>";
 		};
 		EBABAE4FF1008B9D5F4BCEBA /* Frameworks */ = {
@@ -364,10 +364,9 @@
 				82576DD8277470BE003A40B1 /* LaunchScreen.storyboard in Resources */,
 				82710C2E278FF9FA00FC2E8E /* complete.mp3 in Resources */,
 				82710C32278FFA3400FC2E8E /* delete.mp3 in Resources */,
-				82F4B0F527B1705F00F3661D /* spring.mp3 in Resources */,
 				82576DD5277470BE003A40B1 /* Assets.xcassets in Resources */,
+				8292BFC827B188D9002B3EC8 /* sport.gif in Resources */,
 				82576DD3277470BC003A40B1 /* Main.storyboard in Resources */,
-				82F4B0F027B167AB00F3661D /* sport.gif in Resources */,
 				82710C30278FFA0F00FC2E8E /* save.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,6 +432,7 @@
 				8285115827A97C3B00D67B2C /* ExercisesModel.swift in Sources */,
 				822781F627AD5B9E001E6916 /* CreateExerciseAPI.swift in Sources */,
 				8212803A27AC829900EDCE44 /* TrainingPlanModel.swift in Sources */,
+				8292BFCB27B18A13002B3EC8 /* ThemesViewController.swift in Sources */,
 				8287784327948C7000FE442B /* GIF.swift in Sources */,
 				82F4B0E727B12D6100F3661D /* SaveUserInfoViewController.swift in Sources */,
 				8212804427AC83A200EDCE44 /* PlanDayViewController.swift in Sources */,
