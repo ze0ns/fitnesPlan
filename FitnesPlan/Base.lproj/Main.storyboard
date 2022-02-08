@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tZt-yb-SrX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="L34-VJ-eWd">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -35,6 +35,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="ПНД" selectedImage="monday" id="2uy-Rw-lAU"/>
+                    <navigationItem key="navigationItem" id="2S3-mm-gvD"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xih-xD-cYv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -57,10 +58,128 @@
             </objects>
             <point key="canvasLocation" x="-884" y="818"/>
         </scene>
+        <!--Login View Controller-->
+        <scene sceneID="Ogn-Yo-9YH">
+            <objects>
+                <viewController id="L34-VJ-eWd" customClass="LoginViewController" customModule="FitnesPlan" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OW0-X3-wWE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите имя пользователя" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qpq-5o-RLh">
+                                <rect key="frame" x="100" y="241" width="214" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="mail@mail.ru" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aa4-U5-hyR">
+                                <rect key="frame" x="79" y="270" width="257" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Введите пароль" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z6B-af-huJ">
+                                <rect key="frame" x="71" y="347" width="272" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sSr-fZ-qsb">
+                                <rect key="frame" x="79" y="397" width="272" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LqB-X7-SRI">
+                                <rect key="frame" x="71" y="495" width="272" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <segue destination="DnS-kr-Nft" kind="presentation" modalPresentationStyle="fullScreen" id="YbK-3b-ekS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZD0-Hs-pgj">
+                                <rect key="frame" x="168" y="631" width="67" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cx4-6x-N1B"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Qpq-5o-RLh" firstAttribute="centerX" secondItem="OW0-X3-wWE" secondAttribute="centerX" id="8ov-pI-72L"/>
+                            <constraint firstItem="Qpq-5o-RLh" firstAttribute="top" secondItem="cx4-6x-N1B" secondAttribute="top" constant="197" id="dTi-Qh-w4v"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="ZD0-Hs-pgj"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N73-nA-Q0A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3001" y="116"/>
+        </scene>
+        <!--Select Date View Controller-->
+        <scene sceneID="ILe-rB-mvQ">
+            <objects>
+                <viewController id="DnS-kr-Nft" customClass="SelectDateViewController" customModule="FitnesPlan" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ug4-Wn-AaM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s8l-iA-RCO" customClass="CalendarView" customModule="CalendarSwift">
+                                <rect key="frame" x="20" y="108" width="374" height="440"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="separatorColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4cP-Fl-F2b">
+                                <rect key="frame" x="20" y="734" width="374" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Начать тренировки"/>
+                                <connections>
+                                    <action selector="beginTraning:" destination="DnS-kr-Nft" eventType="touchUpInside" id="UHu-2t-2UV"/>
+                                    <segue destination="tZt-yb-SrX" kind="presentation" modalPresentationStyle="fullScreen" id="Z9L-5I-8Qu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsu-71-zJH">
+                                <rect key="frame" x="20" y="676" width="374" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Загрузить тренировки"/>
+                                <connections>
+                                    <action selector="loadPlan:" destination="DnS-kr-Nft" eventType="touchUpInside" id="EFD-e6-56W"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="AZg-eW-Il0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gsu-71-zJH" firstAttribute="leading" secondItem="4cP-Fl-F2b" secondAttribute="leading" id="4Yv-RN-1gh"/>
+                            <constraint firstItem="gsu-71-zJH" firstAttribute="trailing" secondItem="Ug4-Wn-AaM" secondAttribute="trailingMargin" id="eF4-yQ-6Ho"/>
+                            <constraint firstItem="gsu-71-zJH" firstAttribute="trailing" secondItem="4cP-Fl-F2b" secondAttribute="trailing" id="eHR-l4-RpO"/>
+                            <constraint firstItem="AZg-eW-Il0" firstAttribute="bottom" secondItem="4cP-Fl-F2b" secondAttribute="bottom" constant="97" id="m5L-NJ-uCk"/>
+                            <constraint firstItem="4cP-Fl-F2b" firstAttribute="top" secondItem="gsu-71-zJH" secondAttribute="bottom" constant="27" id="nc0-G6-LKR"/>
+                            <constraint firstItem="gsu-71-zJH" firstAttribute="leading" secondItem="Ug4-Wn-AaM" secondAttribute="leadingMargin" id="uOg-jf-gkm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="vhi-nf-qEQ"/>
+                    <connections>
+                        <outlet property="calendarView" destination="s8l-iA-RCO" id="Dlo-Yj-eju"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sck-ln-OC2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2101" y="116"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="jli-Ha-e63">
             <objects>
                 <tabBarController id="tZt-yb-SrX" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="zVt-zD-n0H"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Cc8-77-CNn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -97,6 +216,9 @@
     </scenes>
     <resources>
         <image name="monday" width="128" height="128"/>
+        <systemColor name="separatorColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
