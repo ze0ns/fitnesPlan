@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		065EA2F627B20C6400BA0C0E /* sport.gif in Resources */ = {isa = PBXBuildFile; fileRef = 065EA2F527B20C6400BA0C0E /* sport.gif */; };
 		8212803827AC827500EDCE44 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8212803727AC827500EDCE44 /* UserProfile.swift */; };
 		8212803A27AC829900EDCE44 /* TrainingPlanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8212803927AC829900EDCE44 /* TrainingPlanModel.swift */; };
 		8212803E27AC833F00EDCE44 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8212803D27AC833F00EDCE44 /* LoginViewController.swift */; };
@@ -31,7 +32,6 @@
 		826183F12785153600F554F9 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826183F02785153600F554F9 /* TimerViewController.swift */; };
 		826611A527B1A9FD0011F7A0 /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826611A427B1A9FD0011F7A0 /* CustomAlert.swift */; };
 		826611A727B1AABA0011F7A0 /* UIView + Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826611A627B1AABA0011F7A0 /* UIView + Message.swift */; };
-		826611A927B1AE1D0011F7A0 /* sport.gif in Resources */ = {isa = PBXBuildFile; fileRef = 826611A827B1AE1D0011F7A0 /* sport.gif */; };
 		8282AA2E2776988C009471C5 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8282AA2D2776988C009471C5 /* EntryViewController.swift */; };
 		8285115827A97C3B00D67B2C /* ExercisesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8285115427A97C3B00D67B2C /* ExercisesModel.swift */; };
 		8285115927A97C3B00D67B2C /* customModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8285115527A97C3B00D67B2C /* customModel.swift */; };
@@ -45,6 +45,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		065EA2F527B20C6400BA0C0E /* sport.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sport.gif; sourceTree = "<group>"; };
 		3B3367484C50EA9D07B95E3F /* Pods-Sport 2022.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sport 2022.debug.xcconfig"; path = "Target Support Files/Pods-Sport 2022/Pods-Sport 2022.debug.xcconfig"; sourceTree = "<group>"; };
 		69AD60DC201E8F4DA3438B38 /* Pods-Sport 2022.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sport 2022.release.xcconfig"; path = "Target Support Files/Pods-Sport 2022/Pods-Sport 2022.release.xcconfig"; sourceTree = "<group>"; };
 		8212803727AC827500EDCE44 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
@@ -73,7 +74,6 @@
 		826183F02785153600F554F9 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		826611A427B1A9FD0011F7A0 /* CustomAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
 		826611A627B1AABA0011F7A0 /* UIView + Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Message.swift"; sourceTree = "<group>"; };
-		826611A827B1AE1D0011F7A0 /* sport.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = sport.gif; path = "../../../../../Фитнес/sport.gif"; sourceTree = "<group>"; };
 		8282AA2D2776988C009471C5 /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
 		8285115427A97C3B00D67B2C /* ExercisesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExercisesModel.swift; sourceTree = "<group>"; };
 		8285115527A97C3B00D67B2C /* customModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customModel.swift; sourceTree = "<group>"; };
@@ -155,7 +155,7 @@
 		823BD10527ABAC1600C88DAB /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				826611A827B1AE1D0011F7A0 /* sport.gif */,
+				065EA2F527B20C6400BA0C0E /* sport.gif */,
 				82F4B0F627B170D000F3661D /* SpringImage.swift */,
 			);
 			path = Images;
@@ -348,9 +348,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				82576DD8277470BE003A40B1 /* LaunchScreen.storyboard in Resources */,
+				065EA2F627B20C6400BA0C0E /* sport.gif in Resources */,
 				82576DD5277470BE003A40B1 /* Assets.xcassets in Resources */,
 				82576DD3277470BC003A40B1 /* Main.storyboard in Resources */,
-				826611A927B1AE1D0011F7A0 /* sport.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
