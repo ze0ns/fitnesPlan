@@ -13,8 +13,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var UserName: UILabel!
     @IBOutlet weak var Email: UILabel!
     @IBOutlet weak var Birthday: UILabel!
-    @IBOutlet weak var ChestDiameter: UILabel!
-    @IBOutlet weak var BeltDiameter: UILabel!
+
     
     let realm = try! Realm()
     
@@ -41,9 +40,7 @@ class ProfileViewController: UIViewController {
                     
                     UserName.text = firstname
                     Email.text = email
-                    Birthday.text = ("Д.Р. : \(birthday)")
-//                    ChestDiameter.text = String(chest)
-//                    BeltDiameter.text = String(belt)
+                    Birthday.text = ("🎂: \(birthday)")
                 }
             } catch {
                 // если произошла ошибка, выводим ее в консоль
