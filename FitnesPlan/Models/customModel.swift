@@ -5,19 +5,19 @@
 //  Created by Oschepkov Aleksandr on 31.01.2022.
 //
 
-import Foundation
-// MARK: - AtedBy
-struct AtedBy: Codable {
-    let username: JSONNull?
-    let id: Int
-    let lastname, firstname: String
-}
-
-// MARK: - Role
+//import Foundation
+//// MARK: - AtedBy
+//struct AtedBy: Codable {
+//    let username: JSONNull?
+//    let id: Int
+//    let lastname, firstname: String
+//}
+//
+//// MARK: - Role
 struct Role: Codable {
-    let updatedBy: JSONNull?
+    let updatedBy: String?
     let id: Int
-    let createdBy: JSONNull?
+    let createdBy: String?
     let name, roleDescription, type: String
 
     enum CodingKeys: String, CodingKey {
@@ -30,29 +30,3 @@ struct Role: Codable {
     }
 }
 
-// MARK: - Encode/decode helpers
-
-class JSONNull: Codable, Hashable {
-
-    public static func == (lhs: JSONNull, rhs: JSONNull) -> Bool {
-        return true
-    }
-
-    public var hashValue: Int {
-        return 0
-    }
-
-    public init() {}
-
-    public required init(from decoder: Decoder) throws {
-        let container = try decoder.singleValueContainer()
-        if !container.decodeNil() {
-            throw DecodingError.typeMismatch(JSONNull.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for JSONNull"))
-        }
-    }
-
-    public func encode(to encoder: Encoder) throws {
-        var container = encoder.singleValueContainer()
-        try container.encodeNil()
-    }
-}

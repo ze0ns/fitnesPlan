@@ -6,6 +6,7 @@
 //
 import Strapi_iOS
 import UIKit
+import SDWebImage
 
 class ExerciseViewController: UIViewController {
     

@@ -24,23 +24,17 @@ struct UserP: Codable {
     let provider: String
     let blocked: Bool
     let createdAt, surname: String
-    let createdBy: AtedBy
     let confirmed: Bool
     let birthday, updatedAt, username: String
     let role: Role
-    let updatedBy: AtedBy
     let email, name: String
 
     enum CodingKeys: String, CodingKey {
         case id, provider, blocked
         case createdAt = "created_at"
-        case surname
-        case createdBy = "created_by"
-        case confirmed, birthday
+        case surname, confirmed, birthday
         case updatedAt = "updated_at"
-        case username, role
-        case updatedBy = "updated_by"
-        case email, name
+        case username, role, email, name
     }
 }
 

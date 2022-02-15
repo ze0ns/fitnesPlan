@@ -18,6 +18,8 @@
 		065CA89C27A6ECE300D0693D /* Data+PrettyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065CA89B27A6ECE300D0693D /* Data+PrettyJSON.swift */; };
 		065CA89E27A6F11100D0693D /* ExercisesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065CA89D27A6F11100D0693D /* ExercisesModel.swift */; };
 		065F095027ABE19F004E542E /* ExerciseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065F094F27ABE19F004E542E /* ExerciseAPI.swift */; };
+		065F70ED27B8D0B20068D199 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 065F70EC27B8D0B20068D199 /* SDWebImage */; };
+		065F70EF27B8D0B20068D199 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 065F70EE27B8D0B20068D199 /* SDWebImageMapKit */; };
 		0662981627AE73FB000C225A /* SelectDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0662981527AE73FB000C225A /* SelectDateViewController.swift */; };
 		0675E338278ADBF4008E3B09 /* HomeTraningPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0675E337278ADBF4008E3B09 /* HomeTraningPage.swift */; };
 		067CB45B278B0B730073FE78 /* SecondDayTraining.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067CB45A278B0B730073FE78 /* SecondDayTraining.swift */; };
@@ -73,6 +75,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				065F70ED27B8D0B20068D199 /* SDWebImage in Frameworks */,
+				065F70EF27B8D0B20068D199 /* SDWebImageMapKit in Frameworks */,
 				2FF14160C57F7F5D57677281 /* libPods-FitnesPlan.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,6 +226,10 @@
 			dependencies = (
 			);
 			name = FitnesPlan;
+			packageProductDependencies = (
+				065F70EC27B8D0B20068D199 /* SDWebImage */,
+				065F70EE27B8D0B20068D199 /* SDWebImageMapKit */,
+			);
 			productName = FitnesPlan;
 			productReference = 06801B80278AD4CB00198E77 /* FitnesPlan.app */;
 			productType = "com.apple.product-type.application";
@@ -250,6 +258,9 @@
 				Base,
 			);
 			mainGroup = 06801B77278AD4CB00198E77;
+			packageReferences = (
+				065F70EB27B8D0B20068D199 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 06801B81278AD4CB00198E77 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -562,6 +573,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		065F70EB27B8D0B20068D199 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		065F70EC27B8D0B20068D199 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 065F70EB27B8D0B20068D199 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		065F70EE27B8D0B20068D199 /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 065F70EB27B8D0B20068D199 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 06801B78278AD4CB00198E77 /* Project object */;
 }

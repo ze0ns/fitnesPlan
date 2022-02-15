@@ -10,14 +10,15 @@ import RealmSwift
 
 class ExerciseDB {
 
-     let config = Realm.Configuration(schemaVersion: 0)
+     let config = Realm.Configuration(schemaVersion: 1)
      lazy var mainRealm = try! Realm(configuration: config)
      var ExerciseLocal: [ExerciseProfiles] = []
     
     
 
      func addData(_ exerciseLocal: [ExerciseProfiles]) {
-        
+        print(mainRealm.configuration.fileURL as Any)
+         
         ExerciseLocal = exerciseLocal
         let exercise = ExerciseProfiles()
         let e = self.ExerciseLocal.count
@@ -26,7 +27,6 @@ class ExerciseDB {
          while i < e {
              exercise.id = self.ExerciseLocal[i].id
              exercise.name = self.ExerciseLocal[i].name
-             exercise.exerciseDescription = self.ExerciseLocal[i].exerciseDescription
              exercise.movie = self.ExerciseLocal[i].movie
 
              mainRealm.add(exerciseLocal)

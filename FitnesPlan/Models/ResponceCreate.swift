@@ -16,12 +16,12 @@ import Foundation
 struct ResponceCreate: Codable {
     let id, replay: Int
     let responceCreateDescription: String
-    let exercise: Exercise
+    let exercise: ExerciseProfiles
     let createdAt: String
-    let createdBy: JSONNull?
+    let createdBy: String?
     let weight: Int
     let date, updatedAt: String
-    let updatedBy: JSONNull?
+    let updatedBy: String?
     let user: UserResponce
     let analize: String
     let counter: Int
@@ -39,22 +39,6 @@ struct ResponceCreate: Codable {
     }
 }
 
-// MARK: - Exercise
-struct Exercise: Codable {
-    let movie: JSONNull?
-    let id, createdBy: Int
-    let name: String
-    let exerciseDescription: JSONNull?
-    let updatedBy: Int
-
-    enum CodingKeys: String, CodingKey {
-        case movie, id
-        case createdBy = "created_by"
-        case name
-        case exerciseDescription = "description"
-        case updatedBy = "updated_by"
-    }
-}
 
 // MARK: - User
 struct UserResponce: Codable {

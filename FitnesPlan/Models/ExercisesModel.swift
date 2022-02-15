@@ -11,23 +11,5 @@ import RealmSwift
 class ExerciseProfiles: Object, Codable {
     @objc dynamic var id: Int
     @objc dynamic var name: String
-    @objc dynamic var exerciseDescription: String?
-    @objc dynamic var createdBy, updatedBy: AtedByE?
-    @objc dynamic var createdAt, updatedAt: String?
-    @objc dynamic var movie: String?
-
-    enum CodingKeys: String, CodingKey {
-        case id, name
-        case exerciseDescription = "description"
-        case createdBy = "created_by"
-        case updatedBy = "updated_by"
-        case createdAt = "created_at"
-        case updatedAt = "updated_at"
-        case movie
-    }
-}
-class AtedByE: Object, Codable {
-    @objc dynamic var  username: String?
-    @objc dynamic var  id: Int
-    @objc dynamic var  lastname, firstname: String
+    @objc dynamic var movie: String
 }

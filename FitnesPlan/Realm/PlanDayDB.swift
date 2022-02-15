@@ -11,16 +11,16 @@ import RealmSwift
 
 class PlanDayDB {
 
-     let config = Realm.Configuration(schemaVersion: 0)
+     let config = Realm.Configuration(deleteRealmIfMigrationNeeded: true)
      lazy var mainRealm = try! Realm(configuration: config)
-     var PlanDayLocal: [TrainingPlanElement] = []
+     var PlanDayLocal: [TrainingPlan] = []
     
     
 
-     func addData(_ planDayLocal: [TrainingPlanElement]) {
-        
+     func addData(_ planDayLocal: [TrainingPlan]) {
+
          PlanDayLocal = planDayLocal
-        let planDay = TrainingPlanElement()
+        let planDay = TrainingPlan()
         let count = self.PlanDayLocal.count
         var i = 0
          print(count)
@@ -31,13 +31,13 @@ class PlanDayDB {
              planDay.replay = self.PlanDayLocal[i].replay
              planDay.counter = self.PlanDayLocal[i].counter
              planDay.weight = self.PlanDayLocal[i].weight
-             planDay.trainingPlanDescription = self.PlanDayLocal[i].trainingPlanDescription
-            
+
+
              mainRealm.add(planDayLocal)
 
              i = i + 1
           }
-         
+
         do {
             try mainRealm.commitWrite()
             print(mainRealm.configuration.fileURL as Any)
@@ -45,10 +45,10 @@ class PlanDayDB {
             print(error.localizedDescription)
         }
      }
-    func fetch() -> [TrainingPlanElement] {
+    func fetch() -> [TrainingPlan] {
              //Прочитать объекты
              print(mainRealm.configuration.fileURL as Any)
-             let users = mainRealm.objects(TrainingPlanElement.self)
+             let users = mainRealm.objects(TrainingPlan.self)
              return Array(users)
          }
     func delete () {

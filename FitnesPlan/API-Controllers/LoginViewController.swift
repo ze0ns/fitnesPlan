@@ -22,22 +22,29 @@ class LoginViewController: UIViewController {
         
         strapi.login(
             identifier: "zeons@mail.ru",
-            password: "P@ssw0rd") { response in
+            password: "ao3011osh") { response in
                 guard let record = response.data as? Data  else {return}
                 self.data = record
                 
                 print("Получили ответ, декодим JSON, присвоили его переменным")
-
+                //print(self.data?.prettyJSON)
                 do{
-                    let userProfile = try? JSONDecoder().decode(UserProfile.self, from: self.data!)
+                    let userProfile = try JSONDecoder().decode(UserProfile.self, from: self.data!)
                     Session.shared.userProfile = userProfile
-                    Session.shared.token = userProfile!.jwt
+                    Session.shared.token = userProfile.jwt
                     print("Получили токен ")
                     print(Session.shared.token)
 
-                }catch{
-                    print("Operations Error")
-                    print(error)
+                } catch DecodingError.keyNotFound(let key, let context) {
+                    Swift.print("could not find key \(key) in JSON: \(context.debugDescription)")
+                } catch DecodingError.valueNotFound(let type, let context) {
+                    Swift.print("could not find type \(type) in JSON: \(context.debugDescription)")
+                } catch DecodingError.typeMismatch(let type, let context) {
+                    Swift.print("type mismatch for type \(type) in JSON: \(context.debugDescription)")
+                } catch DecodingError.dataCorrupted(let context) {
+                    Swift.print("data found to be corrupted in JSON: \(context.debugDescription)")
+                } catch let error as NSError {
+                    NSLog("Error in read(from:ofType:) domain= \(error.domain), description= \(error.localizedDescription)")
                 }
                 
             }

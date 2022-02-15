@@ -12,9 +12,9 @@ final class TrainingPlanApi{
     var planDate = "2022-02-06"
     var token = Session.shared.token
     var data: Data?
-    var exercise: [TrainingPlanElement] = []
+    var exercise: [TrainingPlan] = []
     
-    func getPlanDay(comletion: @escaping(([TrainingPlanElement]?)->())){
+    func getPlanDay(comletion: @escaping(([TrainingPlan]?)->())){
         let strapi = Strapi.shared
         strapi.scheme = "https"
         strapi.host = "fitness.zeons.ru"
@@ -30,7 +30,8 @@ final class TrainingPlanApi{
         guard let data = response.data else {return}
         self.data = data as? Data
         do{
-        let trainingPlanJSON = try JSONDecoder().decode([TrainingPlanElement].self, from: self.data!)
+            print(self.data?.prettyJSON ?? " ")
+        let trainingPlanJSON = try JSONDecoder().decode([TrainingPlan].self, from: self.data!)
             print(trainingPlanJSON.count)
             comletion(trainingPlanJSON)
             
