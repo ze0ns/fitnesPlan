@@ -75,7 +75,7 @@ class EntryViewController5: UIViewController,UITextFieldDelegate {
         //Тренировка 1
         traningLabel1.frame = CGRect(x: 25, y: 140, width: 200, height: 22)
         traningLabel1.textAlignment = .left
-        traningLabel1.text = planDayLocalDB[12].exercise?.name
+        traningLabel1.text = planDayLocalDB[12].exer.name
         traningLabel1.textColor = UIColor.black
         traningLabel1.font = UIFont.systemFont(ofSize: 22)
         traningLabel1.backgroundColor = UIColor.white
@@ -129,7 +129,7 @@ class EntryViewController5: UIViewController,UITextFieldDelegate {
         //Тренировка 2
         traningLabel2.frame = CGRect(x: 25, y: 140+50, width: 200, height: 22)
         traningLabel2.textAlignment = .left
-        traningLabel2.text = planDayLocalDB[13].exercise?.name
+        traningLabel2.text = planDayLocalDB[13].exer.name
         traningLabel2.textColor = UIColor.black
         traningLabel2.font = UIFont.systemFont(ofSize: 22)
         traningLabel2.backgroundColor = UIColor.white
@@ -183,7 +183,7 @@ class EntryViewController5: UIViewController,UITextFieldDelegate {
         //Тренировка 3
         traningLabel3.frame = CGRect(x: 25, y: 140+100, width: 200, height: 22)
         traningLabel3.textAlignment = .left
-        traningLabel3.text = planDayLocalDB[14].exercise?.name
+        traningLabel3.text = planDayLocalDB[14].exer.name
         traningLabel3.textColor = UIColor.black
         traningLabel3.font = UIFont.systemFont(ofSize: 22)
         traningLabel3.backgroundColor = UIColor.white
@@ -237,7 +237,7 @@ class EntryViewController5: UIViewController,UITextFieldDelegate {
         //Тренировка 4
         traningLabel4.frame = CGRect(x: 25, y: 140+150, width: 200, height: 22)
         traningLabel4.textAlignment = .left
-        traningLabel4.text = planDayLocalDB[15].exercise?.name
+        traningLabel4.text = planDayLocalDB[15].exer.name
         traningLabel4.textColor = UIColor.black
         traningLabel4.font = UIFont.systemFont(ofSize: 22)
         traningLabel4.backgroundColor = UIColor.white
@@ -291,7 +291,7 @@ class EntryViewController5: UIViewController,UITextFieldDelegate {
         //Тренировка 5
         traningLabel5.frame = CGRect(x: 25, y: 140+200, width: 200, height: 22)
         traningLabel5.textAlignment = .left
-        traningLabel5.text = planDayLocalDB[16].exercise?.name
+        traningLabel5.text = planDayLocalDB[16].exer.name
         traningLabel5.textColor = UIColor.black
         traningLabel5.font = UIFont.systemFont(ofSize: 22)
         traningLabel5.backgroundColor = UIColor.white
@@ -346,7 +346,7 @@ class EntryViewController5: UIViewController,UITextFieldDelegate {
         //Тренировка 6
         traningLabel6.frame = CGRect(x: 25, y: 140+250, width: 200, height: 22)
         traningLabel6.textAlignment = .left
-        traningLabel6.text = planDayLocalDB[15].exercise?.name
+        traningLabel6.text = planDayLocalDB[15].exer.name
         traningLabel6.textColor = UIColor.black
         traningLabel6.font = UIFont.systemFont(ofSize: 22)
         traningLabel6.backgroundColor = UIColor.white
@@ -432,41 +432,41 @@ class EntryViewController5: UIViewController,UITextFieldDelegate {
         let replay0: Int = Int(repeatTextField1.text! as String)!
         let counter0: Int = Int(wayTextField1.text! as String)!
         let weight0: Double = Double(weightTextField1.text! as String)!
-        let ExId0: Int = planDayLocalDB[12].exercise!.id
+        let ExId0: Int = planDayLocalDB[12].exer.id
         let exercise0: [String:Int] = ["id":ExId0]
         let date:String = planDayLocalDB[12].date
         
         let replay1: Int = Int(repeatTextField2.text! as String)!
         let counter1: Int = Int(wayTextField2.text! as String)!
         let weight1: Double = Double(weightTextField2.text! as String)!
-        let ExId1: Int = planDayLocalDB[13].exercise!.id
+        let ExId1: Int = planDayLocalDB[13].exer.id
         let exercise1: [String:Int] = ["id":ExId1]
      
         
         let replay2: Int = Int(repeatTextField3.text! as String)!
         let counter2: Int = Int(wayTextField3.text! as String)!
         let weight2: Double = Double(weightTextField3.text! as String)!
-        let ExId2: Int = planDayLocalDB[14].exercise!.id
+        let ExId2: Int = planDayLocalDB[14].exer.id
         let exercise2: [String:Int] = ["id":ExId2]
         
         
         let replay3: Int = Int(repeatTextField4.text! as String)!
         let counter3: Int = Int(wayTextField4.text! as String)!
         let weight3: Double = Double(weightTextField4.text! as String)!
-        let ExId3: Int = planDayLocalDB[15].exercise!.id
+        let ExId3: Int = planDayLocalDB[15].exer.id
         let exercise3: [String:Int] = ["id":ExId3]
         
      
         let replay4: Int = Int(repeatTextField5.text! as String)!
         let counter4: Int = Int(wayTextField5.text! as String)!
         let weight4: Double = Double(weightTextField5.text! as String)!
-        let ExId4: Int = planDayLocalDB[16].exercise!.id
+        let ExId4: Int = planDayLocalDB[16].exer.id
         let exercise4: [String:Int] = ["id":ExId4]
    
         let replay5: Int = Int(repeatTextField6.text! as String)!
         let counter5: Int = Int(wayTextField6.text! as String)!
         let weight5: Double = Double(weightTextField6.text! as String)!
-        let ExId5: Int = planDayLocalDB[16].exercise!.id
+        let ExId5: Int = planDayLocalDB[16].exer.id
         let exercise5: [String:Int] = ["id":ExId5]
         
         createElement.createPlan(date: date, exercise: exercise0, replay: replay0, counter: counter0, weight: weight0, description: "")

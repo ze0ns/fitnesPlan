@@ -13,31 +13,37 @@ struct UserProfile: Codable {
     let user: UserP
 }
 
+import Foundation
+
 // MARK: - User
 struct UserP: Codable {
     let id: Int
     let provider: String
-    let blocked: JSONNull?
+    let blocked: Bool
     let createdAt, surname: String
-    let createdBy: JSONNull?
     let confirmed: Bool
     let birthday, updatedAt, username: String
-    let role: Role
-    let updatedBy: AtedBy
+    let role: RoleP
     let email, name: String
 
     enum CodingKeys: String, CodingKey {
         case id, provider, blocked
         case createdAt = "created_at"
-        case surname
-        case createdBy = "created_by"
-        case confirmed, birthday
+        case surname, confirmed, birthday
         case updatedAt = "updated_at"
-        case username, role
-        case updatedBy = "updated_by"
-        case email, name
+        case username, role, email, name
     }
 }
 
+// MARK: - Role
+struct RoleP: Codable {
+    let id: Int
+    let name, roleDescription, type: String
 
+    enum CodingKeys: String, CodingKey {
+        case id, name
+        case roleDescription = "description"
+        case type
+    }
+}
 

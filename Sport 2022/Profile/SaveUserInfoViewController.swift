@@ -33,22 +33,6 @@ class SaveUserInfoViewController: UIViewController {
     
     
     @objc func didTapSaveButton() {
-                if let text = WeightTextField.text, !text.isEmpty {
-                    if let text2 = ChestDiameterTextField.text, !text2.isEmpty {
-                        if let text3 = BeltDiameterTextField.text, !text3.isEmpty {
-                            realm.beginWrite()
-                            let newItem = User()
-//                            newItem.weight =  Double(text) ?? 0
-//                            newItem.chestdiameter = Double(text2) ?? 0
-//                            newItem.beltdiameter = Double(text3) ?? 0
-                            realm.add(newItem)
-                            try! realm.commitWrite()
 
-                            completionHandlerUser?()
-                            navigationController?.popToRootViewController(animated: true)
-                            print(realm.configuration.fileURL)
-                        }
-                    }
-                }
             }
 }

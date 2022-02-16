@@ -31,7 +31,7 @@ class PlanDayDB {
              planDay.replay = self.PlanDayLocal[i].replay
              planDay.counter = self.PlanDayLocal[i].counter
              planDay.weight = self.PlanDayLocal[i].weight
-             planDay.trainingPlanDescription = self.PlanDayLocal[i].trainingPlanDescription
+           
             
              mainRealm.add(planDayLocal)
 

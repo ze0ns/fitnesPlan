@@ -26,25 +26,6 @@ class ProfileViewController: UIViewController {
     
     
     func loadData() {
-            do {
-                let realm = try Realm()
 
-                let userinfo = realm.objects(User.self)
-
-                self.user = Array(userinfo)
-
-                for person in user {
-                    let firstname = person.name 
-                    let email = person.email
-                    let birthday = person.birthday
-                    
-                    UserName.text = firstname
-                    Email.text = email
-                    Birthday.text = ("🎂: \(birthday)")
-                }
-            } catch {
-                // если произошла ошибка, выводим ее в консоль
-                print(error)
-            }
         }
  }
