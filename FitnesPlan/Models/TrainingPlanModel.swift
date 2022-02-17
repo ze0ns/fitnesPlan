@@ -12,27 +12,30 @@ import RealmSwift
 
 
 class TrainingPlan: Object, Codable {
-    @objc dynamic var exercise, replay, weight, id: Int
-    @objc dynamic var analize, createdAt, date: String
-    @objc dynamic var counter: Int
-    @objc dynamic var updatedAt: String
-    @objc dynamic var exer: trainig
+    @objc dynamic var id: Int
+    @objc dynamic var date: String
+    @objc dynamic var exercise: Exercise
+    @objc dynamic var replay, counter, weight: Int
+    @objc dynamic var analize: String
+    @objc dynamic var createdAt, updatedAt: Int
+    @objc dynamic var exer: String
 
     enum CodingKeys: String, CodingKey {
-        case exercise, replay, weight, id, analize
+        case id, date, exercise, replay, counter, weight, analize
         case createdAt = "created_at"
-        case date, counter
         case updatedAt = "updated_at"
         case exer
     }
 }
 
-// MARK: - Exer
-class trainig: Object, Codable {
-    @objc dynamic var id = 0
-    @objc dynamic var name: String
-    @objc dynamic var movie: String
+// MARK: - Exercise
+class  Exercise: Object, Codable {
+    @objc dynamic var  id: Int
+    @objc dynamic var  name: String
+    @objc dynamic var  movie: String
 }
+
+
 
 //struct TrainingPlan: Codable {
 //  var exercise, replay, weight, id: Int

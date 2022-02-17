@@ -23,7 +23,7 @@ class SelectDateViewController: UIViewController,CalendarViewDelegate {
     @IBOutlet weak var calendarView: CalendarView!
     
     @IBAction func loadPlan(_ sender: Any) {
-        exerciseDB.delete()
+ //       exerciseDB.delete()
         planDayDB.addData(planDay)
 //        planDayDB.addData(planDay1)
 //        planDayDB.addData(planDay2)

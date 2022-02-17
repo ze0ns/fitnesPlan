@@ -73,7 +73,7 @@ class threeDayTrayning: UIViewController,UITextFieldDelegate {
         //Тренировка 1
         traningLabel1.frame = CGRect(x: 25, y: 140, width: 200, height: 22)
         traningLabel1.textAlignment = .left
-        traningLabel1.text = planDayLocalDB[12].exer.name
+        traningLabel1.text = planDayLocalDB[12].exercise.name
         traningLabel1.textColor = UIColor.black
         traningLabel1.font = UIFont.systemFont(ofSize: 22)
         traningLabel1.backgroundColor = UIColor.white
@@ -127,7 +127,7 @@ class threeDayTrayning: UIViewController,UITextFieldDelegate {
         //Тренировка 2
         traningLabel2.frame = CGRect(x: 25, y: 140+50, width: 200, height: 22)
         traningLabel2.textAlignment = .left
-        traningLabel2.text = planDayLocalDB[13].exer.name
+        traningLabel2.text = planDayLocalDB[13].exercise.name
         traningLabel2.textColor = UIColor.black
         traningLabel2.font = UIFont.systemFont(ofSize: 22)
         traningLabel2.backgroundColor = UIColor.white
@@ -181,7 +181,7 @@ class threeDayTrayning: UIViewController,UITextFieldDelegate {
         //Тренировка 3
         traningLabel3.frame = CGRect(x: 25, y: 140+100, width: 200, height: 22)
         traningLabel3.textAlignment = .left
-        traningLabel3.text = planDayLocalDB[14].exer.name
+        traningLabel3.text = planDayLocalDB[14].exercise.name
         traningLabel3.textColor = UIColor.black
         traningLabel3.font = UIFont.systemFont(ofSize: 22)
         traningLabel3.backgroundColor = UIColor.white
@@ -235,7 +235,7 @@ class threeDayTrayning: UIViewController,UITextFieldDelegate {
         //Тренировка 4
         traningLabel4.frame = CGRect(x: 25, y: 140+150, width: 200, height: 22)
         traningLabel4.textAlignment = .left
-        traningLabel4.text = planDayLocalDB[15].exer.name
+        traningLabel4.text = planDayLocalDB[15].exercise.name
         traningLabel4.textColor = UIColor.black
         traningLabel4.font = UIFont.systemFont(ofSize: 22)
         traningLabel4.backgroundColor = UIColor.white
@@ -289,7 +289,7 @@ class threeDayTrayning: UIViewController,UITextFieldDelegate {
         //Тренировка 5
         traningLabel5.frame = CGRect(x: 25, y: 140+200, width: 200, height: 22)
         traningLabel5.textAlignment = .left
-        traningLabel5.text = planDayLocalDB[16].exer.name
+        traningLabel5.text = planDayLocalDB[16].exercise.name
         traningLabel5.textColor = UIColor.black
         traningLabel5.font = UIFont.systemFont(ofSize: 22)
         traningLabel5.backgroundColor = UIColor.white
@@ -344,7 +344,7 @@ class threeDayTrayning: UIViewController,UITextFieldDelegate {
         //Тренировка 6
         traningLabel6.frame = CGRect(x: 25, y: 140+250, width: 200, height: 22)
         traningLabel6.textAlignment = .left
-        traningLabel6.text = planDayLocalDB[17].exer.name
+        traningLabel6.text = planDayLocalDB[17].exercise.name
         traningLabel6.textColor = UIColor.black
         traningLabel6.font = UIFont.systemFont(ofSize: 22)
         traningLabel6.backgroundColor = UIColor.white

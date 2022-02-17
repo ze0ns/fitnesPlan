@@ -8,8 +8,8 @@ import RealmSwift
 
 // MARK: - Exercise
 //Модель данных используемая для созранения списка упражнений с сервера
-class ExerciseProfiles: Object, Codable {
-    @objc dynamic var id: Int
-    @objc dynamic var name: String
-    @objc dynamic var movie: String
+struct ExerciseProfiles:  Codable {
+     var id: Int
+     var name: String
+     var movie: String
 }

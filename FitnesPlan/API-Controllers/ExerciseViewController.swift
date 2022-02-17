@@ -23,15 +23,13 @@ class ExerciseViewController: UIViewController {
     }
   
     @IBAction func writeDataToDB(_ sender: Any) {
-        print("Пробуем записать в базу")
-        exerciseDB.addData(exercise)
+
     }
     @IBAction func readDataFromDB(_ sender: Any) {
-        exerciseLocalDB = exerciseDB.fetch()
-        print(exerciseLocalDB)
+
     }
     @IBAction func deletaAllDB(_ sender: Any) {
-        exerciseDB.delete()
+
     }
 }
 
