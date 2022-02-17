@@ -1,5 +1,6 @@
 //
-//  HomeTraningPage.swift
+//  SecondDayTraining.swift
+//
 //  FitnesPlan
 //
 //  Created by Oschepkov Aleksandr Olegovich on 09.01.2022.
@@ -7,7 +8,7 @@
 
 import UIKit
 
-class HomeTraningPage: UIViewController,UITextFieldDelegate {
+class SecondDayTraining: UIViewController,UITextFieldDelegate {
     
     let repeatTextField1 = UITextField()
     let traningLabel1 = UILabel()
@@ -59,18 +60,22 @@ class HomeTraningPage: UIViewController,UITextFieldDelegate {
     let textWeight = "90"
     
 
+    let planDayDB  = PlanDayDB()
+    var planDayLocalDB: [TrainingPlan] = []
+    let createElement = CreateExerciseAPI()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        planDayLocalDB = planDayDB.fetch()
         
-        
-        ServiceLabel(text: "Понедельник", x: 25, y: 80) //День тренировки
-        ServiceLabel(text: "10-01-2022", x: 170, y: 80) //Дата тренировки
+        ServiceLabel(text: "Среда", x: 25, y: 80) //День тренировки
+        ServiceLabel(text: planDayLocalDB[6].date, x: 170, y: 80) //Дата тренировки
         
         //Тренировка 1
         traningLabel1.frame = CGRect(x: 25, y: 140, width: 200, height: 22)
         traningLabel1.textAlignment = .left
-        traningLabel1.text = "Жим лежа"
+        traningLabel1.text = planDayLocalDB[6].exercise.name
         traningLabel1.textColor = UIColor.black
         traningLabel1.font = UIFont.systemFont(ofSize: 22)
         traningLabel1.backgroundColor = UIColor.white
@@ -78,7 +83,7 @@ class HomeTraningPage: UIViewController,UITextFieldDelegate {
         repeatTextField1.frame = CGRect(x: 25+200, y: 140, width: 20, height: 22)
         repeatTextField1.textColor = UIColor.black
         repeatTextField1.delegate = self
-        repeatTextField1.text = textRepeat
+        repeatTextField1.text = String(planDayLocalDB[6].replay)
         repeatTextField1.borderStyle = .roundedRect
         repeatTextField1.keyboardType = UIKeyboardType.default
         repeatTextField1.returnKeyType = UIReturnKeyType.done
@@ -94,7 +99,7 @@ class HomeTraningPage: UIViewController,UITextFieldDelegate {
         wayTextField1.frame = CGRect(x: 280, y: 140, width: 20, height: 22)
         wayTextField1.textColor = UIColor.black
         wayTextField1.delegate = self
-        wayTextField1.text = textWay
+        wayTextField1.text = String(planDayLocalDB[6].counter)
         wayTextField1.borderStyle = .roundedRect
         wayTextField1.keyboardType = UIKeyboardType.default
         wayTextField1.returnKeyType = UIReturnKeyType.done
@@ -109,7 +114,7 @@ class HomeTraningPage: UIViewController,UITextFieldDelegate {
         weightTextField1.frame = CGRect(x: 330, y: 140, width: 45, height: 22)
         weightTextField1.textColor = UIColor.black
         weightTextField1.delegate = self
-        weightTextField1.text = textWeight
+        weightTextField1.text = String(planDayLocalDB[6].weight)
         weightTextField1.borderStyle = .roundedRect
         weightTextField1.keyboardType = UIKeyboardType.default
         weightTextField1.returnKeyType = UIReturnKeyType.done
@@ -124,7 +129,7 @@ class HomeTraningPage: UIViewController,UITextFieldDelegate {
         //Тренировка 2
         traningLabel2.frame = CGRect(x: 25, y: 140+50, width: 200, height: 22)
         traningLabel2.textAlignment = .left
-        traningLabel2.text = "Жим лежа на наклонной"
+        traningLabel2.text = planDayLocalDB[7].exercise.name
         traningLabel2.textColor = UIColor.black
         traningLabel2.font = UIFont.systemFont(ofSize: 22)
         traningLabel2.backgroundColor = UIColor.white
@@ -132,7 +137,7 @@ class HomeTraningPage: UIViewController,UITextFieldDelegate {
         repeatTextField2.frame = CGRect(x: 25+200, y: 140+50, width: 20, height: 22)
         repeatTextField2.textColor = UIColor.black
         repeatTextField2.delegate = self
-        repeatTextField2.text = textRepeat
+        repeatTextField2.text = String(planDayLocalDB[7].replay)
         repeatTextField2.borderStyle = .roundedRect
         repeatTextField2.keyboardType = UIKeyboardType.default
         repeatTextField2.returnKeyType = UIReturnKeyType.done
@@ -148,7 +153,7 @@ class HomeTraningPage: UIViewController,UITextFieldDelegate {
         wayTextField2.frame = CGRect(x: 280, y: 190, width: 20, height: 22)
         wayTextField2.textColor = UIColor.black
         wayTextField2.delegate = self
-        wayTextField2.text = textWay
+        wayTextField2.text = String(planDayLocalDB[7].counter)
         wayTextField2.borderStyle = .roundedRect
         wayTextField2.keyboardType = UIKeyboardType.default
         wayTextField2.returnKeyType = UIReturnKeyType.done
@@ -163,7 +168,7 @@ class HomeTraningPage: UIViewController,UITextFieldDelegate {
         weightTextField2.frame = CGRect(x: 330, y: 190, width: 45, height: 22)
         weightTextField2.textColor = UIColor.black
         weightTextField2.delegate = self
-        weightTextField2.text = textWeight
+        weightTextField2.text = String(planDayLocalDB[7].weight)
         weightTextField2.borderStyle = .roundedRect
         weightTextField2.keyboardType = UIKeyboardType.default
         weightTextField2.returnKeyType = UIReturnKeyType.done
@@ -178,7 +183,7 @@ class HomeTraningPage: UIViewController,UITextFieldDelegate {
         //Тренировка 3
         traningLabel3.frame = CGRect(x: 25, y: 140+100, width: 200, height: 22)
         traningLabel3.textAlignment = .left
-        traningLabel3.text = "Разводка на грудь"
+        traningLabel3.text = planDayLocalDB[8].exercise.name
         traningLabel3.textColor = UIColor.black
         traningLabel3.font = UIFont.systemFont(ofSize: 22)
         traningLabel3.backgroundColor = UIColor.white
@@ -186,7 +191,7 @@ class HomeTraningPage: UIViewController,UITextFieldDelegate {
         repeatTextField3.frame = CGRect(x: 25+200, y: 140+100, width: 20, height: 22)
         repeatTextField3.textColor = UIColor.black
         repeatTextField3.delegate = self
-        repeatTextField3.text = textRepeat
+        repeatTextField3.text = String(planDayLocalDB[8].replay)
         repeatTextField3.borderStyle = .roundedRect
         repeatTextField3.keyboardType = UIKeyboardType.default
         repeatTextField3.returnKeyType = UIReturnKeyType.done
@@ -202,7 +207,7 @@ class HomeTraningPage: UIViewController,UITextFieldDelegate {
         wayTextField3.frame = CGRect(x: 280, y: 240, width: 20, height: 22)
         wayTextField3.textColor = UIColor.black
         wayTextField3.delegate = self
-        wayTextField3.text = textWay
+        wayTextField3.text = String(planDayLocalDB[8].counter)
         wayTextField3.borderStyle = .roundedRect
         wayTextField3.keyboardType = UIKeyboardType.default
         wayTextField3.returnKeyType = UIReturnKeyType.done
@@ -217,7 +222,7 @@ class HomeTraningPage: UIViewController,UITextFieldDelegate {
         weightTextField3.frame = CGRect(x: 330, y: 240, width: 45, height: 22)
         weightTextField3.textColor = UIColor.black
         weightTextField3.delegate = self
-        weightTextField3.text = textWeight
+        weightTextField3.text = String(planDayLocalDB[8].weight)
         weightTextField3.borderStyle = .roundedRect
         weightTextField3.keyboardType = UIKeyboardType.default
         weightTextField3.returnKeyType = UIReturnKeyType.done
@@ -232,7 +237,7 @@ class HomeTraningPage: UIViewController,UITextFieldDelegate {
         //Тренировка 4
         traningLabel4.frame = CGRect(x: 25, y: 140+150, width: 200, height: 22)
         traningLabel4.textAlignment = .left
-        traningLabel4.text = "Сгиб рук шт. стоя"
+        traningLabel4.text = planDayLocalDB[9].exercise.name
         traningLabel4.textColor = UIColor.black
         traningLabel4.font = UIFont.systemFont(ofSize: 22)
         traningLabel4.backgroundColor = UIColor.white
@@ -240,7 +245,7 @@ class HomeTraningPage: UIViewController,UITextFieldDelegate {
         repeatTextField4.frame = CGRect(x: 25+200, y: 140+150, width: 20, height: 22)
         repeatTextField4.textColor = UIColor.black
         repeatTextField4.delegate = self
-        repeatTextField4.text = textRepeat
+        repeatTextField4.text = String(planDayLocalDB[9].replay)
         repeatTextField4.borderStyle = .roundedRect
         repeatTextField4.keyboardType = UIKeyboardType.default
         repeatTextField4.returnKeyType = UIReturnKeyType.done
@@ -256,7 +261,7 @@ class HomeTraningPage: UIViewController,UITextFieldDelegate {
         wayTextField4.frame = CGRect(x: 280, y: 290, width: 20, height: 22)
         wayTextField4.textColor = UIColor.black
         wayTextField4.delegate = self
-        wayTextField4.text = textWay
+        wayTextField4.text = String(planDayLocalDB[9].counter)
         wayTextField4.borderStyle = .roundedRect
         wayTextField4.keyboardType = UIKeyboardType.default
         wayTextField4.returnKeyType = UIReturnKeyType.done
@@ -271,7 +276,7 @@ class HomeTraningPage: UIViewController,UITextFieldDelegate {
         weightTextField4.frame = CGRect(x: 330, y: 290, width: 45, height: 22)
         weightTextField4.textColor = UIColor.black
         weightTextField4.delegate = self
-        weightTextField4.text = textWeight
+        weightTextField4.text = String(planDayLocalDB[9].weight)
         weightTextField4.borderStyle = .roundedRect
         weightTextField4.keyboardType = UIKeyboardType.default
         weightTextField4.returnKeyType = UIReturnKeyType.done
@@ -286,7 +291,7 @@ class HomeTraningPage: UIViewController,UITextFieldDelegate {
         //Тренировка 5
         traningLabel5.frame = CGRect(x: 25, y: 140+200, width: 200, height: 22)
         traningLabel5.textAlignment = .left
-        traningLabel5.text = "Сгиб рук гн. с супинацией"
+        traningLabel5.text = planDayLocalDB[10].exercise.name
         traningLabel5.textColor = UIColor.black
         traningLabel5.font = UIFont.systemFont(ofSize: 22)
         traningLabel5.backgroundColor = UIColor.white
@@ -295,7 +300,7 @@ class HomeTraningPage: UIViewController,UITextFieldDelegate {
         repeatTextField5.frame = CGRect(x: 25+200, y: 140+200, width: 20, height: 22)
         repeatTextField5.textColor = UIColor.black
         repeatTextField5.delegate = self
-        repeatTextField5.text = textRepeat
+        repeatTextField5.text = String(planDayLocalDB[10].replay)
         repeatTextField5.borderStyle = .roundedRect
         repeatTextField5.keyboardType = UIKeyboardType.default
         repeatTextField5.returnKeyType = UIReturnKeyType.done
@@ -311,7 +316,7 @@ class HomeTraningPage: UIViewController,UITextFieldDelegate {
         wayTextField5.frame = CGRect(x: 280, y: 340, width: 20, height: 22)
         wayTextField5.textColor = UIColor.black
         wayTextField5.delegate = self
-        wayTextField5.text = textWay
+        wayTextField5.text = String(planDayLocalDB[10].counter)
         wayTextField5.borderStyle = .roundedRect
         wayTextField5.keyboardType = UIKeyboardType.default
         wayTextField5.returnKeyType = UIReturnKeyType.done
@@ -326,7 +331,7 @@ class HomeTraningPage: UIViewController,UITextFieldDelegate {
         weightTextField5.frame = CGRect(x: 330, y: 340, width: 45, height: 22)
         weightTextField5.textColor = UIColor.black
         weightTextField5.delegate = self
-        weightTextField5.text = textWeight
+        weightTextField5.text = String(planDayLocalDB[10].weight)
         weightTextField5.borderStyle = .roundedRect
         weightTextField5.keyboardType = UIKeyboardType.default
         weightTextField5.returnKeyType = UIReturnKeyType.done
@@ -341,7 +346,7 @@ class HomeTraningPage: UIViewController,UITextFieldDelegate {
         //Тренировка 6
         traningLabel6.frame = CGRect(x: 25, y: 140+250, width: 200, height: 22)
         traningLabel6.textAlignment = .left
-        traningLabel6.text = "Сгиб рук в бл. стоя"
+        traningLabel6.text = planDayLocalDB[11].exercise.name
         traningLabel6.textColor = UIColor.black
         traningLabel6.font = UIFont.systemFont(ofSize: 22)
         traningLabel6.backgroundColor = UIColor.white
@@ -349,7 +354,7 @@ class HomeTraningPage: UIViewController,UITextFieldDelegate {
         repeatTextField6.frame = CGRect(x: 25+200, y: 140+250, width: 20, height: 22)
         repeatTextField6.textColor = UIColor.black
         repeatTextField6.delegate = self
-        repeatTextField6.text = textRepeat
+        repeatTextField6.text = String(planDayLocalDB[11].replay)
         repeatTextField6.borderStyle = .roundedRect
         repeatTextField6.keyboardType = UIKeyboardType.default
         repeatTextField6.returnKeyType = UIReturnKeyType.done
@@ -365,7 +370,7 @@ class HomeTraningPage: UIViewController,UITextFieldDelegate {
         wayTextField6.frame = CGRect(x: 280, y: 390, width: 20, height: 22)
         wayTextField6.textColor = UIColor.black
         wayTextField6.delegate = self
-        wayTextField6.text = textWay
+        wayTextField6.text = String(planDayLocalDB[11].counter)
         wayTextField6.borderStyle = .roundedRect
         wayTextField6.keyboardType = UIKeyboardType.default
         wayTextField6.returnKeyType = UIReturnKeyType.done
@@ -380,7 +385,7 @@ class HomeTraningPage: UIViewController,UITextFieldDelegate {
         weightTextField6.frame = CGRect(x: 330, y: 390, width: 45, height: 22)
         weightTextField6.textColor = UIColor.black
         weightTextField6.delegate = self
-        weightTextField6.text = textWeight
+        weightTextField6.text = String(planDayLocalDB[11].weight)
         weightTextField6.borderStyle = .roundedRect
         weightTextField6.keyboardType = UIKeyboardType.default
         weightTextField6.returnKeyType = UIReturnKeyType.done
@@ -415,32 +420,59 @@ class HomeTraningPage: UIViewController,UITextFieldDelegate {
         button.addTarget(self, action: #selector(saveTraining), for: .touchDown)
         button.setTitle("Сохранить тренировку", for: .normal)
         button.layer.cornerRadius = 15
-        button.backgroundColor = UIColor(red: 0.11, green: 0.78, blue: 0.41, alpha: 1.00)
+       // button.backgroundColor = UIColor(red: 0.11, green: 0.78, blue: 0.41, alpha: 1.00)
+        button.backgroundColor = UIColor.blue
         button.tag = 5
         self.view.addSubview(button)
     }
     @objc func saveTraining(){
- 
-        print(repeatTextField1.text)
-        print(repeatTextField2.text)
-        print(repeatTextField3.text)
-        print(repeatTextField4.text)
-        print(repeatTextField5.text)
-        print(repeatTextField6.text)
+//        
+//        let replay0: Int = Int(repeatTextField1.text! as String)!
+//        let counter0: Int = Int(wayTextField1.text! as String)!
+//        let weight0: Double = Double(weightTextField1.text! as String)!
+//        let ExId0: Int = planDayLocalDB[6].exercise.id
+//        let exercise0: [String:Int] = ["id":ExId0]
+//        let date:String = planDayLocalDB[6].date
+//        
+//        let replay1: Int = Int(repeatTextField2.text! as String)!
+//        let counter1: Int = Int(wayTextField2.text! as String)!
+//        let weight1: Double = Double(weightTextField2.text! as String)!
+//        let ExId1: Int = planDayLocalDB[7].exercise.id
+//        let exercise1: [String:Int] = ["id":ExId1]
+//     
+//        
+//        let replay2: Int = Int(repeatTextField3.text! as String)!
+//        let counter2: Int = Int(wayTextField3.text! as String)!
+//        let weight2: Double = Double(weightTextField3.text! as String)!
+//        let ExId2: Int = planDayLocalDB[8].exercise.id
+//        let exercise2: [String:Int] = ["id":ExId2]
+//        
+//        
+//        let replay3: Int = Int(repeatTextField4.text! as String)!
+//        let counter3: Int = Int(wayTextField4.text! as String)!
+//        let weight3: Double = Double(weightTextField4.text! as String)!
+//        let ExId3: Int = planDayLocalDB[9].exercise.id
+//        let exercise3: [String:Int] = ["id":ExId3]
+//        
+//     
+//        let replay4: Int = Int(repeatTextField5.text! as String)!
+//        let counter4: Int = Int(wayTextField5.text! as String)!
+//        let weight4: Double = Double(weightTextField5.text! as String)!
+//        let ExId4: Int = planDayLocalDB[10].exercise.id
+//        let exercise4: [String:Int] = ["id":ExId4]
+//   
+//        let replay5: Int = Int(repeatTextField6.text! as String)!
+//        let counter5: Int = Int(wayTextField6.text! as String)!
+//        let weight5: Double = Double(weightTextField6.text! as String)!
+//        let ExId5: Int = planDayLocalDB[11].exercise.id
+//        let exercise5: [String:Int] = ["id":ExId5]
         
-        print(wayTextField1.text)
-        print(wayTextField2.text)
-        print(wayTextField3.text)
-        print(wayTextField4.text)
-        print(wayTextField5.text)
-        print(wayTextField6.text)
-        
-        print(weightTextField1.text)
-        print(weightTextField2.text)
-        print(weightTextField3.text)
-        print(weightTextField4.text)
-        print(weightTextField5.text)
-        print(weightTextField6.text)
+//        createElement.createPlan(date: date, exercise: exercise0, replay: replay0, counter: counter0, weight: weight0, description: "")
+//        createElement.createPlan(date: date, exercise: exercise1, replay: replay1, counter: counter1, weight: weight1, description: "")
+//        createElement.createPlan(date: date, exercise: exercise2, replay: replay2, counter: counter2, weight: weight2, description: "")
+//        createElement.createPlan(date: date, exercise: exercise3, replay: replay3, counter: counter3, weight: weight3, description: "")
+//        createElement.createPlan(date: date, exercise: exercise4, replay: replay4, counter: counter4, weight: weight4, description: "")
+//        createElement.createPlan(date: date, exercise: exercise5, replay: replay5, counter: counter5, weight: weight5, description: "")
    
     }
 }

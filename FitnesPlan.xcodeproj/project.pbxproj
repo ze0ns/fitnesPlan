@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		060516A127A6A5DA00D1CE01 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060516A027A6A5DA00D1CE01 /* LoginViewController.swift */; };
+		060516A627A6B3ED00D1CE01 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060516A527A6B3ED00D1CE01 /* Session.swift */; };
+		060516A827A6B4A800D1CE01 /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060516A727A6B4A800D1CE01 /* ExerciseViewController.swift */; };
+		0654E3FF27AD33C700A8ADB9 /* TrainingPlanApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0654E3FE27AD33C700A8ADB9 /* TrainingPlanApi.swift */; };
+		0654E40127AD350A00A8ADB9 /* PlanDayDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0654E40027AD350A00A8ADB9 /* PlanDayDB.swift */; };
+		0654E40327AD4A1A00A8ADB9 /* CreateExerciseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0654E40227AD4A1A00A8ADB9 /* CreateExerciseAPI.swift */; };
+		0654E40527AD632900A8ADB9 /* ResponceCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0654E40427AD632900A8ADB9 /* ResponceCreate.swift */; };
+		06569EF227AB959800E71F20 /* TrainingPlanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06569EF127AB959800E71F20 /* TrainingPlanModel.swift */; };
+		065CA89C27A6ECE300D0693D /* Data+PrettyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065CA89B27A6ECE300D0693D /* Data+PrettyJSON.swift */; };
+		065CA89E27A6F11100D0693D /* ExercisesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065CA89D27A6F11100D0693D /* ExercisesModel.swift */; };
+		065F095027ABE19F004E542E /* ExerciseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065F094F27ABE19F004E542E /* ExerciseAPI.swift */; };
+		065F70ED27B8D0B20068D199 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 065F70EC27B8D0B20068D199 /* SDWebImage */; };
+		065F70EF27B8D0B20068D199 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 065F70EE27B8D0B20068D199 /* SDWebImageMapKit */; };
+		0662981627AE73FB000C225A /* SelectDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0662981527AE73FB000C225A /* SelectDateViewController.swift */; };
 		0675E338278ADBF4008E3B09 /* HomeTraningPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0675E337278ADBF4008E3B09 /* HomeTraningPage.swift */; };
 		067CB45B278B0B730073FE78 /* SecondDayTraining.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067CB45A278B0B730073FE78 /* SecondDayTraining.swift */; };
 		067CB45D278B0BC20073FE78 /* threeDayTrayning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067CB45C278B0BC20073FE78 /* threeDayTrayning.swift */; };
@@ -16,10 +30,26 @@
 		06801B8B278AD4CB00198E77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06801B89278AD4CB00198E77 /* Main.storyboard */; };
 		06801B8D278AD4CC00198E77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06801B8C278AD4CC00198E77 /* Assets.xcassets */; };
 		06801B90278AD4CC00198E77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06801B8E278AD4CC00198E77 /* LaunchScreen.storyboard */; };
+		06B7278027A7EF8A00BCE869 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B7277F27A7EF8A00BCE869 /* UserProfile.swift */; };
+		06B7278227A7F8F200BCE869 /* CustomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B7278127A7F8F200BCE869 /* CustomModel.swift */; };
+		06B7278827A81BA600BCE869 /* ExerciseDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B7278727A81BA600BCE869 /* ExerciseDB.swift */; };
+		06B7278A27A81D7400BCE869 /* PlanDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B7278927A81D7400BCE869 /* PlanDayViewController.swift */; };
 		2FF14160C57F7F5D57677281 /* libPods-FitnesPlan.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BB18BB88BEF80A933F58D405 /* libPods-FitnesPlan.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		060516A027A6A5DA00D1CE01 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		060516A527A6B3ED00D1CE01 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		060516A727A6B4A800D1CE01 /* ExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
+		0654E3FE27AD33C700A8ADB9 /* TrainingPlanApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingPlanApi.swift; sourceTree = "<group>"; };
+		0654E40027AD350A00A8ADB9 /* PlanDayDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanDayDB.swift; sourceTree = "<group>"; };
+		0654E40227AD4A1A00A8ADB9 /* CreateExerciseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateExerciseAPI.swift; sourceTree = "<group>"; };
+		0654E40427AD632900A8ADB9 /* ResponceCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponceCreate.swift; sourceTree = "<group>"; };
+		06569EF127AB959800E71F20 /* TrainingPlanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingPlanModel.swift; sourceTree = "<group>"; };
+		065CA89B27A6ECE300D0693D /* Data+PrettyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+PrettyJSON.swift"; sourceTree = "<group>"; };
+		065CA89D27A6F11100D0693D /* ExercisesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesModel.swift; sourceTree = "<group>"; };
+		065F094F27ABE19F004E542E /* ExerciseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseAPI.swift; sourceTree = "<group>"; };
+		0662981527AE73FB000C225A /* SelectDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDateViewController.swift; sourceTree = "<group>"; };
 		0675E337278ADBF4008E3B09 /* HomeTraningPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTraningPage.swift; sourceTree = "<group>"; };
 		067CB45A278B0B730073FE78 /* SecondDayTraining.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondDayTraining.swift; sourceTree = "<group>"; };
 		067CB45C278B0BC20073FE78 /* threeDayTrayning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = threeDayTrayning.swift; sourceTree = "<group>"; };
@@ -31,6 +61,10 @@
 		06801B8C278AD4CC00198E77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		06801B8F278AD4CC00198E77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		06801B91278AD4CC00198E77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06B7277F27A7EF8A00BCE869 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		06B7278127A7F8F200BCE869 /* CustomModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModel.swift; sourceTree = "<group>"; };
+		06B7278727A81BA600BCE869 /* ExerciseDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDB.swift; sourceTree = "<group>"; };
+		06B7278927A81D7400BCE869 /* PlanDayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanDayViewController.swift; sourceTree = "<group>"; };
 		626CB75CB0CDF1C98E3928D6 /* Pods-FitnesPlan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitnesPlan.debug.xcconfig"; path = "Target Support Files/Pods-FitnesPlan/Pods-FitnesPlan.debug.xcconfig"; sourceTree = "<group>"; };
 		B4CABB4DD2B9635A7CAAA2F9 /* Pods-FitnesPlan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitnesPlan.release.xcconfig"; path = "Target Support Files/Pods-FitnesPlan/Pods-FitnesPlan.release.xcconfig"; sourceTree = "<group>"; };
 		BB18BB88BEF80A933F58D405 /* libPods-FitnesPlan.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FitnesPlan.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,6 +75,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				065F70ED27B8D0B20068D199 /* SDWebImage in Frameworks */,
+				065F70EF27B8D0B20068D199 /* SDWebImageMapKit in Frameworks */,
 				2FF14160C57F7F5D57677281 /* libPods-FitnesPlan.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -48,16 +84,63 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		067CB45E278B10560073FE78 /* Service */ = {
+		0605169F27A6A5C700D1CE01 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				060516A527A6B3ED00D1CE01 /* Session.swift */,
+				065F094F27ABE19F004E542E /* ExerciseAPI.swift */,
+				0654E3FE27AD33C700A8ADB9 /* TrainingPlanApi.swift */,
+				0654E40227AD4A1A00A8ADB9 /* CreateExerciseAPI.swift */,
 			);
-			path = Service;
+			path = API;
+			sourceTree = "<group>";
+		};
+		060516A227A6B09B00D1CE01 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				06B7278127A7F8F200BCE869 /* CustomModel.swift */,
+				06B7277F27A7EF8A00BCE869 /* UserProfile.swift */,
+				065CA89D27A6F11100D0693D /* ExercisesModel.swift */,
+				06569EF127AB959800E71F20 /* TrainingPlanModel.swift */,
+				0654E40427AD632900A8ADB9 /* ResponceCreate.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		065CA89A27A6ECCA00D0693D /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				065CA89B27A6ECE300D0693D /* Data+PrettyJSON.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		065F095327AC06A1004E542E /* API-Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				060516A027A6A5DA00D1CE01 /* LoginViewController.swift */,
+				06B7278927A81D7400BCE869 /* PlanDayViewController.swift */,
+				060516A727A6B4A800D1CE01 /* ExerciseViewController.swift */,
+				0662981527AE73FB000C225A /* SelectDateViewController.swift */,
+			);
+			path = "API-Controllers";
+			sourceTree = "<group>";
+		};
+		065F095427AC06C1004E542E /* PlanScreen */ = {
+			isa = PBXGroup;
+			children = (
+				067CB45C278B0BC20073FE78 /* threeDayTrayning.swift */,
+				067CB45A278B0B730073FE78 /* SecondDayTraining.swift */,
+				0675E337278ADBF4008E3B09 /* HomeTraningPage.swift */,
+			);
+			path = PlanScreen;
 			sourceTree = "<group>";
 		};
 		067D1C68278BE09C001C5DB2 /* Realm */ = {
 			isa = PBXGroup;
 			children = (
+				06B7278727A81BA600BCE869 /* ExerciseDB.swift */,
+				0654E40027AD350A00A8ADB9 /* PlanDayDB.swift */,
 			);
 			path = Realm;
 			sourceTree = "<group>";
@@ -83,8 +166,13 @@
 		06801B82278AD4CB00198E77 /* FitnesPlan */ = {
 			isa = PBXGroup;
 			children = (
+				065F095427AC06C1004E542E /* PlanScreen */,
+				065F095327AC06A1004E542E /* API-Controllers */,
+				06B7278327A80A0F00BCE869 /* Storage */,
+				065CA89A27A6ECCA00D0693D /* Extentions */,
+				060516A227A6B09B00D1CE01 /* Models */,
+				0605169F27A6A5C700D1CE01 /* API */,
 				067D1C68278BE09C001C5DB2 /* Realm */,
-				067CB45E278B10560073FE78 /* Service */,
 				06801B83278AD4CB00198E77 /* AppDelegate.swift */,
 				06801B85278AD4CB00198E77 /* SceneDelegate.swift */,
 				06801B87278AD4CB00198E77 /* ViewController.swift */,
@@ -92,11 +180,15 @@
 				06801B8C278AD4CC00198E77 /* Assets.xcassets */,
 				06801B8E278AD4CC00198E77 /* LaunchScreen.storyboard */,
 				06801B91278AD4CC00198E77 /* Info.plist */,
-				0675E337278ADBF4008E3B09 /* HomeTraningPage.swift */,
-				067CB45A278B0B730073FE78 /* SecondDayTraining.swift */,
-				067CB45C278B0BC20073FE78 /* threeDayTrayning.swift */,
 			);
 			path = FitnesPlan;
+			sourceTree = "<group>";
+		};
+		06B7278327A80A0F00BCE869 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Storage;
 			sourceTree = "<group>";
 		};
 		589F93E7189943C830132171 /* Pods */ = {
@@ -134,6 +226,10 @@
 			dependencies = (
 			);
 			name = FitnesPlan;
+			packageProductDependencies = (
+				065F70EC27B8D0B20068D199 /* SDWebImage */,
+				065F70EE27B8D0B20068D199 /* SDWebImageMapKit */,
+			);
 			productName = FitnesPlan;
 			productReference = 06801B80278AD4CB00198E77 /* FitnesPlan.app */;
 			productType = "com.apple.product-type.application";
@@ -162,6 +258,9 @@
 				Base,
 			);
 			mainGroup = 06801B77278AD4CB00198E77;
+			packageReferences = (
+				065F70EB27B8D0B20068D199 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 06801B81278AD4CB00198E77 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -231,12 +330,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06569EF227AB959800E71F20 /* TrainingPlanModel.swift in Sources */,
+				060516A827A6B4A800D1CE01 /* ExerciseViewController.swift in Sources */,
+				065F095027ABE19F004E542E /* ExerciseAPI.swift in Sources */,
+				06B7278A27A81D7400BCE869 /* PlanDayViewController.swift in Sources */,
+				0654E40527AD632900A8ADB9 /* ResponceCreate.swift in Sources */,
+				060516A127A6A5DA00D1CE01 /* LoginViewController.swift in Sources */,
 				06801B88278AD4CB00198E77 /* ViewController.swift in Sources */,
+				06B7278227A7F8F200BCE869 /* CustomModel.swift in Sources */,
 				0675E338278ADBF4008E3B09 /* HomeTraningPage.swift in Sources */,
 				06801B84278AD4CB00198E77 /* AppDelegate.swift in Sources */,
+				0654E40127AD350A00A8ADB9 /* PlanDayDB.swift in Sources */,
 				067CB45B278B0B730073FE78 /* SecondDayTraining.swift in Sources */,
+				06B7278827A81BA600BCE869 /* ExerciseDB.swift in Sources */,
+				0654E40327AD4A1A00A8ADB9 /* CreateExerciseAPI.swift in Sources */,
+				0662981627AE73FB000C225A /* SelectDateViewController.swift in Sources */,
 				06801B86278AD4CB00198E77 /* SceneDelegate.swift in Sources */,
+				0654E3FF27AD33C700A8ADB9 /* TrainingPlanApi.swift in Sources */,
 				067CB45D278B0BC20073FE78 /* threeDayTrayning.swift in Sources */,
+				060516A627A6B3ED00D1CE01 /* Session.swift in Sources */,
+				065CA89C27A6ECE300D0693D /* Data+PrettyJSON.swift in Sources */,
+				065CA89E27A6F11100D0693D /* ExercisesModel.swift in Sources */,
+				06B7278027A7EF8A00BCE869 /* UserProfile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +573,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		065F70EB27B8D0B20068D199 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		065F70EC27B8D0B20068D199 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 065F70EB27B8D0B20068D199 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		065F70EE27B8D0B20068D199 /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 065F70EB27B8D0B20068D199 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 06801B78278AD4CB00198E77 /* Project object */;
 }
